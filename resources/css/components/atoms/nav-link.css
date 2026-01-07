@@ -1,0 +1,55 @@
+
+.nav-link > * {
+    transition: opacity var(--transition-duration--nav-link) ease-in-out;
+}
+
+.nav-link__idle {
+    opacity: 1;
+}
+.nav-link__idle > .nav-link-label {
+    color: var(--color--black);
+}
+
+.nav-link__hover {
+    border: 1px solid #aaa;
+    opacity: 0;
+}
+.nav-link__hover > .nav-link-label {
+    color: #aaa;
+}
+
+.nav-link:hover > div:nth-child(1) {
+    opacity: 0;
+}
+.nav-link:hover > div:nth-child(2) {
+    opacity: 1;
+}
+
+/* Styles pour .nav-link-wrapper */
+.nav-link-wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+}
+.nav-link-wrapper > * {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+/* Styles pour .nav-link-state */
+.nav-link-state {
+    border-radius: 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+/* Styles pour .nav-link-label (équivalent de @extend .link-label) */
+.nav-link-label {
+    font-size: 5rem;
+    font-family: 'sans', serif;
+}
