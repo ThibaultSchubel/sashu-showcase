@@ -2,10 +2,9 @@
 
 @layout.main()
     @slot('main')
-            @!component('components/organisms/navbar.edge')
-
-        <!--<h1>{{ i18n.t("messages.contact") }}</h1>-->
+        @!component('components/organisms/curtain.edge')
+        @!component('components/organisms/navbar.edge', { i18n, currentLocale, path})
+        @!component('components/organisms/menu.edge', { i18n, currentLocale, path})
         <!--<img class="drawer-media__source" src="public/images/3-h.jpg" alt=""/>-->
-        @!component('components/atoms/nav-link', {label : "home", link: 'home'})
     @endslot
 @end

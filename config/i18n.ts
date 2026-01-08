@@ -7,6 +7,7 @@ const i18nConfig = defineConfig({
   supportedLocales: ['en', 'fr', 'cz'],
   fallbackLocales: {
     sk: 'cz',
+    cs: 'cz',
   },
   loaders: [
     loaders.fs({

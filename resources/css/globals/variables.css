@@ -1,6 +1,10 @@
 :root {
     --color--black: #1c1a1a;
+    --color--grey: #9b948b;
     --color--background: #fff5e2;
 
+    /*navbar*/
+    --navbar--height: 3rem;
+    --navbar--margins: 1.5rem;
     --transition-duration--nav-link: 0.3s;
 }

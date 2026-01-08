@@ -1,3 +1,15 @@
-<div class="navbar-strip">
+<div class="navbar-container">
+  <div class="navbar-strip">
+    <div class="navbar-left navbar-content">
+      @!component('components/atoms/nav-link', {label : i18n.t("nav.intro"), link: 'home', selected: path==='home'})
+      @!component('components/atoms/nav-link', {label : i18n.t("nav.retail"), link: 'retail', selected: path==='retail'})
+      @!component('components/atoms/nav-link', {label : i18n.t("nav.research"), link: 'research', selected: path==='research'})
+      @!component('components/atoms/nav-link', {label : i18n.t("nav.contact"), link: 'contact', selected: path==='contact'})
+    </div>
 
-</div>
+    <div class="navbar-right navbar-content">
+      @!component('components/atoms/nav-link', {label : "en", link: 'home', selected: currentLocale==="en"})
+      @!component('components/atoms/nav-link', {label : "fr", link: 'home', selected: currentLocale==="fr"})
+      @!component('components/atoms/nav-link', {label : "cz", link: 'home', selected: currentLocale==="cz"})
+    </div>
+  </div>

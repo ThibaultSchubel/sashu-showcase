@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+@layout.main()
+    @slot('main')
+        @!component('components/organisms/curtain.edge')
+        @!component('components/organisms/navbar.edge', { i18n, currentLocale, path})
+        @!component('components/organisms/menu.edge', { i18n, currentLocale, path})
+        <!--<img class="drawer-media__source" src="public/images/3-h.jpg" alt=""/>-->
+    @endslot
+@end
+
