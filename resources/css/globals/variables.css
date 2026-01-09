@@ -1,10 +1,23 @@
 :root {
     --color--black: #1c1a1a;
     --color--grey: #9b948b;
+    --color--white: #ffffff;
     --color--background: #fff5e2;
+    --color--menu-background: #e8ddc8;
+    --color--text: #ffffff;
+    --color--gold: #dcd0b8;
 
     /*navbar*/
     --navbar--height: 3rem;
     --navbar--margins: 1.5rem;
     --transition-duration--nav-link: 0.3s;
+
+    /*menu*/
+    --menu-button--size: 5.2rem;
+    --menu-button--top-mangin: 0.6rem;
+    --menu-slat--opacity: 0.92;
+
+    --menu-button--animation-duration: 1s;
+    --menu-slat--animation-duration: 1s;
+    --menu--animation-duration: 2s;
 }

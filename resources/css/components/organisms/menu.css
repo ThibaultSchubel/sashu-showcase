@@ -1,0 +1,8 @@
+.menu-button{
+    position: fixed;
+    top: var(--menu-button--top-mangin);
+    right: 50%;
+    width: var(--menu-button--size);
+    height: var(--menu-button--size);
+    transform: translateX(calc( var(--menu-button--size) / 2));
+}

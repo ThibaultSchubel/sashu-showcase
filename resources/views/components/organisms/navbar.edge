@@ -8,8 +8,8 @@
     </div>
 
     <div class="navbar-right navbar-content">
-      @!component('components/atoms/nav-link', {label : "en", link: 'home', selected: currentLocale==="en"})
-      @!component('components/atoms/nav-link', {label : "fr", link: 'home', selected: currentLocale==="fr"})
-      @!component('components/atoms/nav-link', {label : "cz", link: 'home', selected: currentLocale==="cz"})
+      @!component('components/atoms/nav-link', {label : "en", link: 'locale', locale: 'en', selected: currentLocale==="en"})
+      @!component('components/atoms/nav-link', {label : "fr", link: 'locale', locale: 'fr',selected: currentLocale==="fr"})
+      @!component('components/atoms/nav-link', {label : "cz", link: 'locale', locale: 'cz',selected: currentLocale==="cz"})
     </div>
   </div>

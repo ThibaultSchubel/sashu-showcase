@@ -2,7 +2,7 @@
 <div class="nav-link-container">
 
     @if (selected)
-     <div class="nav-link-wrapper" href="{{route(link)}}">
+     <div class="nav-link-wrapper">
               <div class="nav-link-state nav-link__idle">
                   <h5 class="nav-link-label">{{label}}</h5>
               </div>
@@ -20,7 +20,7 @@
 
     @else
 
-        <a class="nav-link-wrapper nav-link" href="{{route(link)}}">
+        <a class="nav-link-wrapper nav-link"  href="{{route(link, [locale])}}">
           <div class="nav-link-state nav-link__idle">
               <h5 class="nav-link-label">{{label}}</h5>
           </div>

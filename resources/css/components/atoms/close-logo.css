@@ -1,0 +1,4 @@
+.close-logo-container * {
+    stroke: var(--color--white);
+    stroke-width: 10px;
+}
