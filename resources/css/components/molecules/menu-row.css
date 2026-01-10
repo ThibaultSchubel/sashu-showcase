@@ -1,0 +1,6 @@
+.menu-row-container {
+  padding: var(--menu-link--tb-padding) calc(var(--menu-link--lr-padding) * 3)
+    var(--menu-link--tb-padding) var(--menu-link--lr-padding);
+  width: 100%;
+  border-bottom: 1px solid var(--color--black);
+}

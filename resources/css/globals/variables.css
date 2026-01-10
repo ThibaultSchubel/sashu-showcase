@@ -8,9 +8,13 @@
     --color--gold: #dcd0b8;
 
     /*navbar*/
-    --navbar--height: 3rem;
+    --navbar--height: 2.8rem;
     --navbar--margins: 1.5rem;
+    --navlink--font-size: 1rem;
+    --navlink--page-width: 8rem;
+    --navlink--lang-width: 4rem;
     --transition-duration--nav-link: 0.3s;
+
 
     /*menu*/
     --menu-button--size: 5.2rem;
@@ -20,4 +24,13 @@
     --menu-button--animation-duration: 1s;
     --menu-slat--animation-duration: 1s;
     --menu--animation-duration: 2s;
+
+    --menu-link--lr-padding: 2rem;
+    --menu-link--tb-padding: 0.5rem;
+
+
+    /*breakpoints*/
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1200px;
 }

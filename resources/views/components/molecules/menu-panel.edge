@@ -1,18 +1,26 @@
 <div class="menu-panel-container" id="menu-panel">
+  <div class="menu-panel-stack">
     <div class="menu-panel-background">
-       <div class="menu-panel-slat"></div>
-        <div class="menu-panel-slat"></div>
-       <div class="menu-panel-slat"></div>
-       <div class="menu-panel-slat"></div>
-       <div class="menu-panel-slat"></div>
-       <div class="menu-panel-slat"></div>
-       <div class="menu-panel-slat"></div>
-       <div class="menu-panel-slat"></div>
-       <div class="menu-panel-slat"></div>
-       <div class="menu-panel-slat"></div>
-
-     </div>
-
-    <div class="menu-panel-links">
+      @each(slat in [1, 2, 3, 4, 5, 6, 7, 8, 9])
+        <div class="menu-panel-slat">
         </div>
+      @endeach
     </div>
+
+    <div class="menu-panel-content" id="menu-content">
+      <div class="menu-panel-links">
+        @!component('components/molecules/menu-row.edge', {label : i18n.t("nav.intro"), link: 'home-show', locale: currentLocale, selected: path==='home'})
+        @!component('components/molecules/menu-row.edge', {label : i18n.t("nav.retail"), link: 'retail-show', locale: currentLocale, selected: path==='retail'})
+        @!component('components/molecules/menu-row.edge', {label : i18n.t("nav.research"), link: 'research-show', locale: currentLocale, selected: path==='research'})
+        @!component('components/molecules/menu-row.edge', {label : i18n.t("nav.contact"), link: 'contact-show', locale: currentLocale, selected: path==='contact'})
+
+        <div class="menu-panel-languages">
+          @!component('components/atoms/menu-link', {label : "en", link: 'locale', locale: 'en', selected: currentLocale==="en"})
+          @!component('components/atoms/menu-link', {label : "fr", link: 'locale', locale: 'fr',selected: currentLocale==="fr"})
+          @!component('components/atoms/menu-link', {label : "cz", link: 'locale', locale: 'cz',selected: currentLocale==="cz"})
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,24 @@
-  <a class="menu-link-content">
-    <div class="nav-link-wrapper nav-link" href="{{ route(link, [locale]) }}">
-      <h5 class="nav-link-label">
+
+@if (selected)
+  <div class="menu-link-content">
+    <div class="menu-link-wrapper">
+      <h5 class="menu-link-label menu-link-selected">
+        {{ label }}
+      </h5>
+    </div>
+  </div>
+
+@else
+  <a class="menu-link-content" href="{{ route(link, [locale]) }}">
+    <div class="menu-link-wrapper menu-link-wrapper__idle">
+      <h5 class="menu-link-label menu-link-idle">
+        {{ label }}
+      </h5>
+    </div>
+    <div class="menu-link-wrapper menu-link-wrapper__hover">
+      <h5 class="menu-link-label menu-link-hover">
         {{ label }}
       </h5>
     </div>
   </a>
+@endif

@@ -3,17 +3,18 @@ export class LogoMenu {
   menuButtonLogo
   menuButtonClose
   menuButton
+  menuContent
   isMenuOpen = false
 
   constructor() {
     this.menuPanel = document.querySelector('#menu-panel')
+    this.menuContent = document.querySelector('#menu-content')
     this.menuButton = document.querySelector('#menu-button')
     this.menuButtonLogo = document.querySelector('#menu-button-logo')
     this.menuButtonClose = document.querySelector('#menu-button-close')
   }
 
   toggle(duration) {
-
     this.menuButton.style.pointerEvents = 'none'
 
     if (!this.isMenuOpen) {
@@ -33,6 +34,7 @@ export class LogoMenu {
 
         this.menuButtonClose.style.transition = `transform ${duration / 2}ms ease`
         this.menuButtonClose.style.transform = `scaleY(1)`
+        this.menuContent.style.opacity = 1
       }, duration / 2)
 
       /*Panel*/
@@ -58,6 +60,7 @@ export class LogoMenu {
       }, duration / 2)
 
       /*Panel*/
+      this.menuContent.style.opacity = 0
       this.menuPanel.style.transition = `opacity ${duration}ms ease-in-out`
       this.menuPanel.style.opacity = 0
 

@@ -1,6 +1,6 @@
 .nav-link-container{
     height: 100%;
-    margin-top: 0.18rem;
+    margin-top: 0.1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,9 +60,9 @@
 
 /* Styles pour .nav-link-label (équivalent de @extend .link-label) */
 .nav-link-label {
-    font-size: 1.1rem;
+    font-size: var(--navlink--font-size);
     font-family: 'sans', serif;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .nav-link__point{
@@ -75,8 +75,8 @@
 }
 
 .nav-link-wave{
-    width: 3.6rem;
-    height: 1.8rem;
+    width: 3.2rem;
+    height: 1.6rem;
     transform: translateY(0.75rem);
 }
 
