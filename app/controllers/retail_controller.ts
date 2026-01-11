@@ -1,5 +1,6 @@
 import type { HttpContext } from '@adonisjs/core/http'
 import { DetectLocalService } from '#services/detect_local_service'
+import { ContentService, ContentTypeEnum } from '#services/content_service'
 
 export default class RetailController {
   async index(ctx: HttpContext) {
@@ -8,10 +9,23 @@ export default class RetailController {
   }
 
   async show({ params, view }: HttpContext) {
+    //Get Locale
     const language = params.locale
+    const contentPath = ContentTypeEnum.retail
     const i18n = DetectLocalService.getI18n(language)
-    if (i18n) {
-      return view.render('pages/retail', { i18n, currentLocale: language, path: 'retail' })
+
+    //Get Content
+    const content = await ContentService.getContent(contentPath)
+
+    console.log(content)
+
+    if (i18n && content) {
+      return view.render('pages/retail', {
+        i18n,
+        currentLocale: language,
+        path: contentPath,
+        content,
+      })
     }
   }
 }

@@ -1,0 +1,27 @@
+{
+  "title": "Nani Nails",
+  "subtitle": "Olomouc",
+  "year": "2018",
+  "description": [
+    "For NaniNails stores, we designed a refreshing interior with a surprising designer product stand. We supported the atmosphere as if in the glow of theater spotlights with a curtain made of curtains, where the main role is played by the NaniNails logo. The cleanliness of the interior makes the products stand out and, most importantly, customers like it, feel good in the store and return.",
+    "Pour les boutiques NaniNails, nous avons imaginé un intérieur rafraîchissant, agrémenté d'un présentoir design original. Nous avons créé une ambiance feutrée, évoquant les projecteurs d'une salle de spectacle, grâce à un rideau composé de draperies où le logo NaniNails occupe une place centrale.La propreté de l'espace met en valeur les produits et, surtout, les clients apprécient l'expérience, se sentent bien en boutique et y reviennent.",
+    "Pro provozovny NaniNails jsme navrhli osvěžující interiér s překvapivým designovým stojanem na produkty. Atmosféru jako v záři divadelních reflektorů jsme podpořili oponou ze závěsů, kde hlavní roli má logo NaniNails. Čistota interiéru dává vyniknout produktům a co je nejdůležitější zákaznicím se líbí, cítí se v obchodě dobře a vracejí se."
+  ],
+  "mainImageH": "nany-nails-h",
+  "mainImageV": "nany-nails-v",
+  "mainImageAlt": [
+    "Nany Nails shop interior",
+    "Intérieurs de la boutiqueNany Nails",
+    "Interier obchodu Nany Nails"
+  ],
+  "images": [
+    {
+      "image": "nany-nails-1",
+      "alt": ["Nany Nails products", "Produits Nany Nails", "Produkty Nany Nails"]
+    },
+    {
+      "image": "nany-nails-2",
+      "alt": ["Nany Nails products", "Produits Nany Nails", "Produkty Nany Nails"]
+    }
+  ]
+}
