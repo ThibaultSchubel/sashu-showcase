@@ -1,4 +1,5 @@
 .menu-button{
+    z-index: 50;
     position: fixed;
     top: var(--menu-button--top-mangin);
     right: 50%;

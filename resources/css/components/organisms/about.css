@@ -1,0 +1,22 @@
+.about-section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+}
+
+.about-column{
+    max-width: 50%;
+}
+
+
+@media (width < 1400px) {
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-column{
+        max-width: 100%;
+        width: 100%;
+    }
+}

@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 
 @layout.main()
-    @slot('main')
-        @!component('components/organisms/curtain.edge')
-        @!component('components/organisms/navbar.edge', { i18n, currentLocale, path})
-        @!component('components/organisms/menu.edge', { i18n, currentLocale, path})
-        <!--<img class="drawer-media__source" src="public/images/3-h.jpg" alt=""/>-->
-    @endslot
+  @slot('main')
+    @!component('components/organisms/curtain.edge')
+    @!component('components/organisms/navbar.edge', { i18n, currentLocale, path})
+    @!component('components/organisms/menu.edge', { i18n, currentLocale, path})
+    <!--<img class="drawer-media__source" src="public/images/3-h.jpg" alt=""/>-->
+
+    <div class="project-content-container">
+      <div class="project-content-list">
+
+        @!component('components/organisms/project.edge', { project: content[0] })
+        @!component('components/organisms/about.edge', {i18n})
+        @!component('components/organisms/project.edge', { project: content[0] })
+        @!component('components/organisms/project.edge', { project: content[0] })
+      </div>
+
+    </div>
+
+  @endslot
 @end
 

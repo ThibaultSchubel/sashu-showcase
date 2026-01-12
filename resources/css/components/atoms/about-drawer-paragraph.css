@@ -1,0 +1,10 @@
+.about-drawer-paragraph-container > p {
+    text-align: justify;
+    text-justify: inter-word;
+    text-indent: 40px;
+    font-family: "sans";
+    font-weight: 200;
+    font-size: 1.2rem;
+    white-space: pre-line;
+    line-height: 1.4;
+}

@@ -1,7 +1,6 @@
- <div class="project__picture project-picture" data-parallax='.8'>
-        <picture>
-          <source media="(orientation: portrait)" srcset="./images/living/3-v.jpg">
-          <img id="open-panel" src="./images/living/3-h.jpg" alt="Obyvák s moderním krbem"
-            infobox="Pokoj pro astronauty" />
+ <div class="project-image-container">
+        <picture class="project-image-picture">
+          <source  class="project-image-v-img project-image-img" media="(orientation: portrait)" srcset={{project.mainImageV}}>
+          <img class="project-image-h-img  project-image-img" id="open-panel" src={{project.mainImageH}} alt="Obyvák s moderním krbem"/>
         </picture>
-      </div>
+ </div>

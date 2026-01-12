@@ -5,6 +5,8 @@
   display: grid;
   grid-template-rows: 100%;
   grid-template-columns: 100%;
+  z-index: 50;
+
 }
 
 .menu-circle-container:hover > .menu-circle-overlay {

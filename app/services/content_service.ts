@@ -3,33 +3,39 @@ import { Exception } from '@adonisjs/core/exceptions'
 
 interface ContentImageObject {
   image: string
-  alt: string[]
+  alt: LocalizedString
+}
+
+interface LocalizedString {
+  en: string
+  fr: string
+  cz: string
 }
 
 interface RawContentObject {
-  title: string | string[]
-  subtitle: string | string[]
+  title: string | LocalizedString
+  subtitle: string | LocalizedString
   year: string
-  description: string | string[]
+  description: string | LocalizedString
   mainImageH: string
   mainImageV: string
-  mainImageAlt: string | string[]
+  mainImageAlt: string | LocalizedString
   images: {
     image: string
-    alt: string | string[]
+    alt: string | LocalizedString
   }[]
 }
 
 interface ContentObject {
   fileName: string
-  title: string[]
-  subtitle: string[]
+  title: LocalizedString
+  subtitle: LocalizedString
   year: string
-  description: string[]
+  description: LocalizedString
   mainImageH: string
   mainImageV: string
 
-  mainImageAlt: string[]
+  mainImageAlt: LocalizedString
   images: ContentImageObject[]
 }
 
@@ -39,10 +45,10 @@ export enum ContentTypeEnum {
 }
 
 export class ContentService {
-  private static languagesNumber = 3
+  private static languagesArray = ['en', 'fr', 'cz']
   private static fileExtension = '.json'
   private static contentFolderPath = 'resources/content/'
-  private static imagesFolderPath = 'public/images/'
+  private static imagesFolderPath = '/images/'
 
   public static async getContent(contentType: ContentTypeEnum): Promise<ContentObject[]> {
     try {
@@ -115,14 +121,14 @@ export class ContentService {
     }
   }
 
-  private static formatString(rawString: string | string[]): string[] {
-    const stringArray = []
-
+  private static formatString(rawString: string | LocalizedString): LocalizedString {
     if (typeof rawString === 'string') {
-      for (let i = 0; i < this.languagesNumber; i++) {
-        stringArray.push(rawString)
+      const localizedObj: LocalizedString = {} as LocalizedString
+      for (const lang of this.languagesArray) {
+        localizedObj[lang as keyof LocalizedString] = rawString
       }
-      return stringArray
+
+      return localizedObj
     } else {
       return rawString
     }

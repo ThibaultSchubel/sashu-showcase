@@ -20,3 +20,22 @@ a {
     color: unset;
     text-decoration: none;
 }
+
+*{
+    scrollbar-width: thin;
+    scrollbar-color: var(--color--black) var(--color--background);
+}
+
+*::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--color--black);        /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color--black);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid var(--color--background); ;  /* creates padding around scroll thumb */
+}
