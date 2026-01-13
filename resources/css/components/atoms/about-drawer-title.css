@@ -39,7 +39,6 @@
     height: var(--about-drawer-button--size);
     display: grid;
     transition: opacity var(--transition-duration--nav-link) ease-in-out;
-
 }
 
 .about-drawer-button-line {
