@@ -1,12 +1,15 @@
 <div class="about-section">
-    <div class="about-column about-left">
-         @!component('components/atoms/about-title.edge', {question: i18n.t("about.left-question"), answer: i18n.t("about.left-answer-retail")})
-         @!component('components/atoms/about-paragraph.edge', {text: i18n.t("about.paragraph-retail")})
-    </div>
+  <div class="about-column about-left">
+    @!component('components/atoms/about-title.edge', {question: i18n.t("about.left-question"), answer: i18n.t("about.left-answer-retail")})
+    @!component('components/atoms/about-paragraph.edge', {text: i18n.t("about.paragraph-retail")})
+  </div>
 
-    <div class="about-column about-right">
-          @!component('components/atoms/about-title.edge', {question: i18n.t("about.right-question"), answer: i18n.t("about.right-answer-retail")})
-          @!component('components/molecules/about-drawer.edge', {title: i18n.t("about.drawer-1-title"), paragraph: i18n.t("about.drawer-1-paragraph")})
+  <div class="about-column about-right">
+    @!component('components/atoms/about-title.edge', {question: i18n.t("about.right-question"), answer: i18n.t("about.right-answer-retail")})
+    <div class="about-right-content">
+      @!component('components/molecules/about-drawer.edge', {index: 0, title: i18n.t("about.drawer-1-title"), paragraph: i18n.t("about.drawer-1-paragraph")})
+      @!component('components/molecules/about-drawer.edge', {index: 1, title: i18n.t("about.drawer-2-title"), paragraph: i18n.t("about.drawer-2-paragraph")})
+      @!component('components/molecules/about-drawer.edge', {index: 2, title: i18n.t("about.drawer-3-title"), paragraph: i18n.t("about.drawer-3-paragraph")})
     </div>
-
+  </div>
 </div>

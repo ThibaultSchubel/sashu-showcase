@@ -1,10 +1,16 @@
-<div class="about-drawer-title-container">
+<div class="about-drawer-title-container" id="about-drawer-title">
   <div class="about-drawer-title-content">
     <h5>
       {{ title }}
     </h5>
-    @!component('components/atoms/drawer-button.edge')
+
+    <div class="about-drawer-button-container about-drawer-button-arrow" id="about-drawer-button">
+        <div class="about-drawer-button-line-center about-drawer-button-line"></div>
+        <div class="about-drawer-button-line-left about-drawer-button-line"></div>
+        <div class="about-drawer-button-line-right about-drawer-button-line"></div>
+    </div>
+
   </div>
-  <div class="about-drawer-title-frame"></div>
+  <div class="about-drawer-title-frame"  id="about-drawer-select"></div>
 
 </div>

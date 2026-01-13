@@ -33,12 +33,37 @@
     transition: transform var(--transition-duration--nav-link) ease-in-out, opacity var(--transition-duration--nav-link) ease-in-out;
 }
 
-.about-drawer-title-container:hover > .about-drawer-title-frame{
-    transform: scale(1);
-    opacity: 1;
+/*About Button*/
+.about-drawer-button-container {
+    width: var(--about-drawer-button--size);
+    height: var(--about-drawer-button--size);
+    display: grid;
+    transition: opacity var(--transition-duration--nav-link) ease-in-out;
+
 }
 
-.about-drawer-title-container:hover > .about-drawer-title-frame{
-    transform: scale(1);
-    opacity: 1;
+.about-drawer-button-line {
+    grid-row: 1;
+    grid-column: 1;
+    width: 1px;
+    background-color: var(--color--black);
+    transition: transform var(--transition-duration--nav-link) ease-in-out;
+
+}
+
+.about-drawer-button-line-center {
+    transform: translateX(calc(var(--about-drawer-button--size) / 2));
+}
+
+
+
+.about-drawer-button-line-left{
+    transform: translateY(calc(var(--about-drawer-button--size) / -2)) rotate(90deg) scale(1);
+    transform-origin: bottom center;
+
+}
+
+.about-drawer-button-line-right {
+    transform: translateY(calc(var(--about-drawer-button--size) / -2)) rotate(90deg) scale(1);
+    transform-origin: bottom center;
 }
