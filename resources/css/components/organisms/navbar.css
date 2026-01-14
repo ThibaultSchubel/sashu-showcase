@@ -44,7 +44,6 @@
 
 @media (width < 1200px) {
     .navbar-strip{
-        background-color: aqua;
         display: none;
     }
 }

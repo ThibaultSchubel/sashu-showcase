@@ -1,12 +1,14 @@
 import {Curtain} from './curtain';
 import { LogoMenu } from './logo-menu.js'
 import { AboutDrawer } from './about-drawer.js'
+import ProjectDrawer from './project-drawer.js'
 
 const CURTAIN_DURATION = 300
 
 const curtain = new Curtain();
 const logoMenu = new LogoMenu();
 const aboutDrawers = new AboutDrawer();
+const projectDrawer = new ProjectDrawer();
 
 const loadListener = () => {
   curtain.open(CURTAIN_DURATION)
@@ -22,6 +24,9 @@ const clickListener = (e) => {
   } else if (e.target.id === 'about-drawer') {
     e.preventDefault()
     aboutDrawers.toggle(e)
+  } else if (e.target.id === 'project-drawer-close') {
+    e.preventDefault()
+    projectDrawer.close(e)
   }
 }
 

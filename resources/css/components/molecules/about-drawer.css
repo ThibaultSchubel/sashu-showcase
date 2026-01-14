@@ -17,10 +17,6 @@
     transform: translateX(calc(var(--about-drawer-button--size) / 2)) rotate(45deg) scale(0.75);
 }
 
-.about-drawer-container:hover .about-drawer-button-line-right {
-    transform: translateX(calc(var(--about-drawer-button--size) / 2)) rotate(45deg) scale(0.75);
-}
-
 .about-drawer-container:hover  .about-drawer-title-frame{
     transform: scale(1);
     opacity: 1;

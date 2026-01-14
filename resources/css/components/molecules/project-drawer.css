@@ -1,0 +1,230 @@
+/*Layers*/
+
+.project-drawer-layers {
+  z-index: 500;
+}
+
+.project-drawer-fix {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.project-drawer-stack {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 100%;
+}
+
+.project-drawer-stack > * {
+  grid-column: 1/1;
+  grid-row: 1/1;
+  height: 100%;
+  width: 100%;
+}
+
+.project-drawer-background {
+  background-color: var(--color--drawer-background);
+}
+
+.project-drawer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  pointer-events: none;
+}
+
+.project-drawer-container-stack {
+  width: 100%;
+  display: block;
+  background-color: var(--color--black);
+  box-shadow: var(--color--black) 0 2px 15px 0;
+  padding: 0 2rem;
+ max-height: 100vh;
+}
+
+
+/*Content*/
+
+.project-drawer-content {
+  pointer-events: auto;
+  width: 100%;
+  background-color: var(--color--black);
+}
+
+.project-drawer-content-font {
+  border: 2px solid var(--color--white);
+  border-radius: var(--project-drawer--panel-radius) var(--project-drawer--panel-radius) 0 0;
+  padding: 2.5rem 2.5rem 5rem 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  background-color: var(--color--background);
+  gap: 2rem;
+}
+
+
+.project-drawer-content-left {
+  padding: 0 10%;
+}
+
+.project-drawer-content-right {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  max-height: 80vh;
+}
+
+.project-drawer-content-right > p {
+  text-align: justify;
+  text-justify: inter-word;
+  text-indent: 40px;
+  font-family: 'sans';
+  font-weight: 200;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  max-width: 1700px;
+  overflow-y: auto;
+  padding: 0 0.5rem ;
+}
+
+
+@media (width < 1200px) {
+  .project-drawer-content-font {
+    padding: 2rem 2rem 3rem 2rem;
+  }
+
+  .project-drawer-content-right > p {
+    text-indent: 30px;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    max-width: 1700px;
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 0 0.5rem ;
+  }
+
+}
+
+@media (width < 960px) {
+  .project-drawer-content-font {
+    padding: 2rem 2rem 3rem 2rem;
+  }
+
+  .project-drawer-content-right {
+    max-height: 60vh;
+  }
+}
+
+@media (width < 960px) and (orientation: portrait) {
+  .project-drawer-content-font{
+    flex-direction: column;
+  }
+}
+
+@media (width < 768px) {
+  .project-drawer-content-font {
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
+  }
+
+  .project-drawer-content-font{
+    flex-direction: column;
+  }
+
+  .project-drawer-content-right > p {
+    text-indent: 30px;
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+}
+
+@media (width < 960px) and (orientation: landscape) {
+  .project-drawer-content-font{
+    overflow-y: auto;
+
+    height: 80vh;
+  }
+
+  .project-drawer-content-right > p {
+    overflow-y: hidden;
+  }
+}
+
+
+@media (width < 480px) {
+  .project-drawer-content-font {
+    padding: 1rem 1rem 2rem 1rem;
+  }
+
+  .project-drawer-content-right {
+    max-height: 45vh;
+  }
+
+  .project-drawer-content-right > p {;
+    line-height: 1.2;
+    padding: 0 0.5rem ;
+  }
+}
+
+@media (width < 480px) and (orientation: portrait) {
+
+  .project-drawer-content-right {
+    max-height: 40vh;
+  }
+}
+
+/*
+@media (width < 1200px)  and (orientation: portrait) {
+  .project-drawer-content {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 2rem 5rem 2rem;
+
+  }
+
+  .project-drawer-content-right > p {
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+}
+
+
+@media  (width < 768px){
+  .project-drawer-content {
+    gap: 1rem;
+    padding: 2rem 2rem 3rem 2rem;
+  }
+
+  .project-drawer-content {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 2rem 5rem 2rem;
+
+  }
+}
+
+@media (width < 480px) {
+  .project-drawer-title-container > h3 {
+    font-size: 1rem;
+  }
+
+  .project-drawer-content {
+    padding: 1rem 1rem 4rem 1rem;
+  }
+
+  .project-drawer-title-container > h5 {
+    font-size: 0.6rem;
+  }
+
+  .project-drawer-content-right > p {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}
+*/
+
+

@@ -9,14 +9,13 @@
 
     <div class="project-content-container">
       <div class="project-content-list">
-
         @!component('components/organisms/project.edge', { project: content[0] })
         @!component('components/organisms/about.edge', {i18n})
-        @!component('components/organisms/project.edge', { project: content[0] })
-        @!component('components/organisms/project.edge', { project: content[0] })
       </div>
         @!component('components/organisms/footer.edge', {i18n})
     </div>
+    @!component('components/molecules/project-drawer.edge', { project })
+
   @endslot
 @end
 
