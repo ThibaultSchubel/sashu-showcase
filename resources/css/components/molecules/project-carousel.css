@@ -1,8 +1,17 @@
 .project-carousel-container{
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
     justify-content: center;
     height: 25rem;
+    pointer-events: none;
+
+}
+
+.project-carousel-container > *{
+    grid-row: 1;
+    grid-column: 1;
 }
 
 .project-carousel-images{
@@ -10,8 +19,8 @@
     height: 100%;
     display: flex;
     justify-content: center;
-
 }
+
 
 .project-carousel-stack{
     height: 100%;
@@ -24,48 +33,27 @@
 
 }
 
-.project-carousel-img{
-    z-index: 50;
+.project-carousel-buttons{
+    width: 100%;
     height: 100%;
-    grid-row: 1;
-    grid-column: 1;
-    overflow: hidden;
-    aspect-ratio: 3/2;
-    border-radius: 1rem;
-    border: 2px solid white;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
 }
 
-.project-carousel-stack > img:nth-child(1) {
-    transform: translateX(-25%) perspective(80rem) rotateY(70deg)  scale(0.8);
-    transform-origin: center left;
-    z-index: 10;
-    opacity: 0.6;
-
+.project-carousel-buttons > *{
+    height: 100%;
+    width: 50%;
+    background-color: transparent;
+    pointer-events: auto;
 }
 
-.project-carousel-stack > img:nth-child(2) {
-    transform: translateX(-15%) perspective(80rem) rotateY(70deg) scale(1);
-    transform-origin: center left;
-    opacity: 0.9;
-    z-index: 20;
-
+.project-carousel-buttons> div:first-child{
+transform:  translateX(-50%);
 }
 
-.project-carousel-stack > img:nth-child(4) {
-    transform:  translateX(15%)  perspective(80rem) rotateY(-70deg) scale(1);
-    transform-origin: center right;
-    opacity: 0.9;
-    z-index: 20;
-
-}
-
-.project-carousel-stack > img:nth-child(5) {
-    transform: translateX(25%) perspective(80rem) rotateY(-70deg)  scale(0.8);
-    transform-origin: center right;
-    opacity: 0.6;
-    z-index: 10;
-
+.project-carousel-buttons> div:last-child{
+    transform:  translateX(50%);
 }
 
 @media (width < 1400px) {
@@ -100,15 +88,28 @@
     }
 }
 
+
 /*
-.project-carousel-left-arrow{
-    aspect-ratio: 3/2;
+.project-carousel-stack > div:nth-child(2){
+    animation: leftImage_anim 1s;
+    transform: translateX(-15%) perspective(80rem) rotateY(70deg) scale(1);
+    transform-origin: center left;
 
 }
 
-.project-carousel-left-arrow > img{
-    height: 80%;
-    /transform: perspective(1) scaleZ(1) rotateY(0deg);
-    transform: perspective(40rem) scaleZ(0.5) rotateY(80deg);
+
+@keyframes leftImage_anim
+{
+    0%{
+        z-index: 31;
+        transform: translateX(-15%) perspective(80rem) rotateY(70deg) scale(1);
+    }
+    80%{
+        opacity: 1;
+        transform: translateX(-10%) perspective(80rem) rotateY(0deg) scale(1.2);
+    }
+    100%{
+        opacity: 0;
+    }
 }
-*/
+ */

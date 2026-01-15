@@ -1,6 +1,5 @@
 /*Title*/
 .project-drawer-tape {
-    background-color: var(--color--black);
     width: 100%;
     pointer-events: auto;
     display: flex;

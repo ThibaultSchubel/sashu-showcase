@@ -8,8 +8,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    border: #9b948b solid 1px;
-
 }
 
 .project-image-picture{
@@ -35,9 +33,6 @@
     transition: transform 1000ms ease-in-out;
 }
 
-.project-image-img:hover {
-    transform: scale(1.05);
-}
 
 
 @media  (width < 1200px) and (orientation: landscape){

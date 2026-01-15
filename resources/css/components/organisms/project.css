@@ -1,3 +1,16 @@
 .project-picture-preview {
     width: 100%;
 }
+
+.project-picture-preview * {
+   pointer-events: none;
+}
+
+
+.project-picture-preview:hover .project-image-img {
+    transform: scale(1.05);
+}
+
+.project-data {
+    display: none;
+}

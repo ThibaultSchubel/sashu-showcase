@@ -1,15 +1,17 @@
 <div class="project-carousel-container">
-    <div class="project-carousel-images">
-  <div class="project-carousel-stack">
-    <img class="project-carousel-img" src="/images/retail/nany-nails-h.jpg" />
-    <img class="project-carousel-img" src="/images/retail/nany-nails-h.jpg" />
-    <img class="project-carousel-img" src="/images/retail/nany-nails-h.jpg" />
-        <img class="project-carousel-img" src="/images/retail/nany-nails-h.jpg" />
-        <img class="project-carousel-img" src="/images/retail/nany-nails-h.jpg" />
-  </div>
+  <div class="project-carousel-images">
+    <div class="project-carousel-stack" id="project-carousel-stack">
+      @!component('components/atoms/project-carousel-image.edge')
+      @!component('components/atoms/project-carousel-image.edge')
+      @!component('components/atoms/project-carousel-image.edge')
+      @!component('components/atoms/project-carousel-image.edge')
+      @!component('components/atoms/project-carousel-image.edge')
+    </div>
   </div>
 
-
-   <div class="project-carousel-buttons"></div>
+  <div class="project-carousel-buttons">
+      <div id="project-carousel-previous"></div>
+      <div id="project-carousel-next"></div>
+  </div>
 
 </div>
