@@ -25,9 +25,9 @@ export default class ProjectDrawer {
     this.subtitleSpot = document.querySelector('#subtitle-spot')
     this.descriptionSpot = document.querySelector('#description-spot')
 
-    if (this.background) this.background.style.transition = `opacity ${this.duration}ms ease-out`
-
     this.closeWithoutAnimations()
+
+    if (this.background) this.background.style.transition = `opacity ${this.duration}ms ease-out`
   }
 
   open(element) {
@@ -76,9 +76,9 @@ export default class ProjectDrawer {
   }
 
   closeWithoutAnimations() {
-    this.background.style.opacity = 0
-    this.secondLayer.style.transform = `scaleX(0.9) translateY(${this.secondLayerIdle})`
-    this.firstLayer.style.transform = `translateY(${this.firstLayer.offsetHeight}px)`
-    this.projectDrawer.style.display = `none`
+    if (this.background) this.background.style.opacity = 0
+    if (this.secondLayer)this.secondLayer.style.transform = `scaleX(0.9) translateY(${this.secondLayerIdle})`
+    if (this.firstLayer) this.firstLayer.style.transform = `translateY(${this.firstLayer.offsetHeight}px)`
+    if (this.projectDrawer) this.projectDrawer.style.display = `none`
   }
 }

@@ -2,7 +2,10 @@ export default class ProjectCarousel {
   panels = []
   images = []
   hoverDuration = 300
-  animationDuration = 500
+  animationDuration = 1000
+
+  leftWingAnimationName = 'leftImage_anim'
+  rightWingAnimationName = 'rightImage_anim'
 
   panelsHoverTransform = [
     `translateX(-30%) perspective(100rem) rotateY(60deg)  scale(0.9)`,
@@ -31,21 +34,20 @@ export default class ProjectCarousel {
   ]
 
   constructor() {
-    this.panels = Array.from(document.querySelector('#project-carousel-stack').children)
+    if (document.querySelector('#project-carousel-stack')){
+      this.panels = Array.from(document.querySelector('#project-carousel-stack').children)
 
-    this.panels.forEach((panel, index) => {
-      panel.style.zIndex = this.panelsZIndex[index]
-      panel.style.transformOrigin = this.panelsTransformOrigins[index]
-      panel.style.transform = this.panelsIdleTransform[index]
-      this.changeOpacity(panel, this.panelsOpacity[index])
-    })
+      this.panels.forEach((panel, index) => {
+        panel.style.zIndex = this.panelsZIndex[index]
+        panel.style.transformOrigin = this.panelsTransformOrigins[index]
+        panel.style.transform = this.panelsIdleTransform[index]
+        this.changeOpacity(panel, this.panelsOpacity[index])
+      })
+    }
   }
 
   populatePanels(element) {
-    console.log(element.target)
-
     const images = Array.from(element.target.querySelector('#project-data-imgs').children)
-
     let imgIndex = 0
     this.panels.forEach((panel) => {
       panel.querySelector('img').src = images[imgIndex].src
@@ -55,6 +57,8 @@ export default class ProjectCarousel {
   }
 
   changeImage(indent) {
+    this.copyPanel(indent === -1 ? 1 : 3)
+
     const images = this.panels.map((panel) => {
       return panel.querySelector('img')
     })
@@ -63,14 +67,23 @@ export default class ProjectCarousel {
     })
 
     images.forEach((image, index) => {
-      image.style.transition = `opacity ${this.animationDuration / 2}ms ease-in`
-      image.style.opacity = 0
+      //Configure panels opacity to 0
 
+        image.style.transition = `opacity ${this.animationDuration / 2}ms ease-in`
+        image.style.opacity = 0
+
+
+      //Calculate the new index
       let previousIndex = (index + indent + images.length) % images.length
 
       window.setTimeout(() => {
+        //Apply the new image to the panel
         image.src = imagesSrc[previousIndex]
-        image.style.opacity = 1
+
+        //Configure panels opacity to 1
+
+          image.style.opacity = 1
+
       }, this.animationDuration / 2)
     })
   }
@@ -121,5 +134,23 @@ export default class ProjectCarousel {
 
   formatHoverTransition(duration) {
     return `transform ${duration}ms ease-out`
+  }
+
+  copyPanel(panelIndex) {
+    const newPanel = this.panels[panelIndex].cloneNode(true)
+    newPanel.style.transform = this.panelsHoverTransform[1]
+
+
+    if (panelIndex < 3) {
+      newPanel.style.animation = `${this.leftWingAnimationName} ${this.animationDuration}ms`
+    } else {
+      newPanel.style.animation = `${this.rightWingAnimationName} ${this.animationDuration}ms`
+    }
+    newPanel.style.zIndex = 31
+    this.panels[panelIndex].parentNode.insertBefore(newPanel, this.panels[panelIndex].nextSibling)
+
+    window.setTimeout(() => {
+      newPanel.remove()
+    }, this.animationDuration)
   }
 }

@@ -1,0 +1,49 @@
+.contact-card-container {
+}
+
+
+.contact-card-name {
+    font-family: "sans";
+    font-weight: 300;
+    font-size: 2rem;
+    color: var(--color--black);
+    margin: 0;
+    padding: 0;
+
+}
+
+.contact-card-role {
+    font-family: "sans";
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--color--black);
+    margin: 0;
+    padding: 0;
+}
+
+.contact-card-info{
+  display: flex;
+    flex-direction: column;
+}
+
+.contact-card-info > * {
+    font-family: "sans";
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: var(--color--black);
+    margin: 0;
+    padding: 0;
+}
+
+@media (width < 980px) {
+    .contact-card-name {
+        font-size: 1.8rem;
+    }
+
+    .contact-card-info > * {
+
+        font-size: 1rem;
+
+    }
+}
+

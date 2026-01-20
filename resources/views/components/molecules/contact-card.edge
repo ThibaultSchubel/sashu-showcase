@@ -1,0 +1,24 @@
+<div class="contact-card-container">
+  <h4 class="contact-card-name">
+   {{name}}
+  </h4>
+@if(role)
+
+  <h5 class="contact-card-role">
+    {{role}}
+  </h5>
+@end
+
+
+<div class="contact-card-info">
+
+@each(line in lines)
+ <p class="contact-card-info">
+    {{line}}
+   </p>
+@end
+
+
+    </div>
+
+</div>

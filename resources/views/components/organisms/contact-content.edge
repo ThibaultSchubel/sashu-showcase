@@ -1,0 +1,42 @@
+<div class="contact-content-container">
+  <div class="contact-content-page">
+    <div class="contact-content-columns">
+
+      <div class="contact-content-left-column">
+        <div class="contact-content-grid">
+          <div class="contact-content-grid-title">
+            @!component('components/molecules/contact-title.edge', {i18n})
+
+          </div>
+          <div class="contact-content-grid-cards">
+            @!component('components/molecules/contact-card.edge', {name: i18n.t("contact.card-1-name"), role: i18n.t("contact.card-1-role"), lines: [i18n.t("contact.card-1-line-1"), i18n.t("contact.card-1-line-2")]})
+            @!component('components/molecules/contact-card.edge', {name: i18n.t("contact.card-2-name"), role: i18n.t("contact.card-2-role"), lines: [i18n.t("contact.card-2-line-1"), i18n.t("contact.card-2-line-2")]})
+            @!component('components/molecules/contact-card.edge', {name: i18n.t("contact.card-3-name"), lines: [i18n.t("contact.card-3-line-1"), i18n.t("contact.card-3-line-2"), i18n.t("contact.card-3-line-3")]})
+
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-content-right-column">
+        <div class="contact-content-photo-container">
+          <img src="/images/contact/photo_team.png" alt="Team SaShu" />
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-content-footer">
+      <div class="contact-content-footer-content">
+
+        <p>
+          {{ i18n.t("contact.ic") }}
+        </p>
+        <p>
+          {{ i18n.t("contact.iban") }}
+        </p>
+        <p>
+          {{ i18n.t("contact.bic") }}
+        </p>
+      </div>
+    </div>
+    @!component('components/organisms/footer.edge', {i18n})
+  </div>

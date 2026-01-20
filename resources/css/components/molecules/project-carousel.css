@@ -89,27 +89,35 @@ transform:  translateX(-50%);
 }
 
 
-/*
-.project-carousel-stack > div:nth-child(2){
-    animation: leftImage_anim 1s;
-    transform: translateX(-15%) perspective(80rem) rotateY(70deg) scale(1);
-    transform-origin: center left;
-
-}
-
 
 @keyframes leftImage_anim
 {
     0%{
-        z-index: 31;
+        opacity: 0;
         transform: translateX(-15%) perspective(80rem) rotateY(70deg) scale(1);
     }
-    80%{
+    70%{
         opacity: 1;
         transform: translateX(-10%) perspective(80rem) rotateY(0deg) scale(1.2);
     }
     100%{
+        transform: translateX(-5%) perspective(80rem) rotateY(0deg) scale(1);
         opacity: 0;
     }
 }
- */
+
+@keyframes rightImage_anim
+{
+    0%{
+        opacity: 0;
+        transform: translateX(15%) perspective(80rem) rotateY(70deg) scale(1);
+    }
+    70%{
+        opacity: 1;
+        transform: translateX(10%) perspective(80rem) rotateY(0deg) scale(1.2);
+    }
+    100%{
+        transform: translateX(5%) perspective(80rem) rotateY(0deg) scale(1);
+        opacity: 0;
+    }
+}
