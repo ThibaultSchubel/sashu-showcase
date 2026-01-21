@@ -1,0 +1,38 @@
+.intro-hud-skip{
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.7rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+.intro-hud-languages{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+}
+
+@media (width < 768px) {
+    .intro-hud-skip{
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 0.5rem;
+    }
+
+    .intro-hud-languages{
+        top: 0;
+        right: 0;
+        padding: 0.5rem;
+       left: 0;
+    }
+}

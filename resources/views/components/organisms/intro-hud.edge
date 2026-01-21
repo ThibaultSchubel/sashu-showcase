@@ -1,0 +1,9 @@
+<div class="intro-hud-skip">
+  @!component('components/atoms/intro-button.edge', {label: "Skip presentation", link: 'retail-show', locale: currentLocale})
+</div>
+
+<div class="intro-hud-languages">
+  @!component('components/atoms/intro-button.edge', {label: "EN", link: 'locale', locale: 'en', selected: currentLocale==="en"})
+  @!component('components/atoms/intro-button.edge', {label: "FR", link: 'locale', locale: 'fr', selected: currentLocale==="fr"})
+  @!component('components/atoms/intro-button.edge', {label: "CZ", link: 'locale', locale: 'cz', selected: currentLocale==="cz"})
+</div>
