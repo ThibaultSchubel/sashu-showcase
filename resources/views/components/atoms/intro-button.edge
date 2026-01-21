@@ -1,0 +1,14 @@
+
+    @if (!selected)
+
+<a class="intro-button-stack" href="{{ route(link, [locale]) }}">
+    <p class="intro-button-label intro-button-idle">{{label}}</p>
+    <p class="intro-button-label intro-button-hover">{{label}}</p>
+</a>
+
+    @else
+
+    <div class="intro-button-stack">
+        <p class="intro-button-label intro-button-selected">{{label}}</p>
+    </div>
+    @endif

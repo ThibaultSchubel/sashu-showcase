@@ -16,7 +16,6 @@ export class Curtain {
   }
 
   close(link, duration){
-    console.log(link)
     this.curtain.style.display = 'inline'
     this.curtain.style.transition = `opacity ${duration}ms ease-out`
 

@@ -3,14 +3,16 @@ import { LogoMenu } from './logo-menu.js'
 import { AboutDrawer } from './about-drawer.js'
 import ProjectDrawer from './project-drawer.js'
 import ProjectCarousel from './project-carousel.js'
+import { IntroVideo } from './video.js'
 
 const CURTAIN_DURATION = 300
 
-const curtain = new Curtain();
+const curtain = new Curtain()
 const logoMenu = new LogoMenu();
 const aboutDrawers = new AboutDrawer();
 const projectDrawer = new ProjectDrawer();
 const projectCarousel = new ProjectCarousel();
+const introVideo = new IntroVideo(curtain, CURTAIN_DURATION)
 
 const loadListener = () => {
   curtain.open(CURTAIN_DURATION)
