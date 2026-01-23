@@ -1,9 +1,11 @@
 import { readFile, readdir } from 'node:fs/promises'
 import { Exception } from '@adonisjs/core/exceptions'
+import { MarkdownFile } from '@dimerapp/markdown'
+import { toHtml } from '@dimerapp/markdown/utils'
 
 interface ContentImageObject {
   image: string
-  alt: LocalizedString
+  alt: string
 }
 
 interface LocalizedString {
@@ -15,8 +17,6 @@ interface LocalizedString {
 interface RawContentObject {
   title: string | LocalizedString
   subtitle: string | LocalizedString
-  year: string
-  description: string | LocalizedString
   mainImageH: string
   mainImageV: string
   mainImageAlt: string | LocalizedString
@@ -28,14 +28,12 @@ interface RawContentObject {
 
 interface ContentObject {
   fileName: string
-  title: LocalizedString
-  subtitle: LocalizedString
-  year: string
-  description: LocalizedString
+  title: string
+  subtitle: string
   mainImageH: string
   mainImageV: string
-
-  mainImageAlt: LocalizedString
+  description: string
+  mainImageAlt: string
   images: ContentImageObject[]
 }
 
@@ -45,23 +43,38 @@ export enum ContentTypeEnum {
 }
 
 export class ContentService {
-  private static languagesArray = ['en', 'fr', 'cz']
-  private static fileExtension = '.json'
   private static contentFolderPath = 'resources/content/'
   private static imagesFolderPath = '/images/'
 
-  public static async getContent(contentType: ContentTypeEnum): Promise<ContentObject[]> {
+  public static async getContent(
+    contentType: ContentTypeEnum,
+    language: 'en' | 'fr' | 'cz'
+  ): Promise<ContentObject[]> {
     try {
-      const filesList = await this.getContentFilesList(contentType)
+      //const filesList = await this.getContentFilesList(contentType)
+      const projects = await this.listProjectsNames(contentType)
 
-      if (filesList.length > 0) {
-        const filesContentList = await Promise.all(
-          filesList.map(async (file) => {
-            return await this.getFileContent(contentType, file)
+      if (projects.length > 0) {
+        const contentObjects: ContentObject[] = await Promise.all(
+          projects.map(async (project) => {
+            const structure = await this.getStructureContent(contentType, project, language)
+            const description = await this.getDescription(contentType, project, language)
+            console.log(description)
+
+            return {
+              fileName: project,
+              title: structure.title,
+              subtitle: structure.subtitle,
+              description,
+              mainImageH: structure.mainImageH,
+              mainImageV: structure.mainImageV,
+              mainImageAlt: structure.mainImageAlt,
+              images: structure.images,
+            }
           })
         )
 
-        return filesContentList.sort((a, b) => {
+        return contentObjects.sort((a, b) => {
           const numA = Number.parseInt(a.fileName.split('-')[0], 10)
           const numB = Number.parseInt(b.fileName.split('-')[0], 10)
           return numA - numB
@@ -77,39 +90,57 @@ export class ContentService {
     }
   }
 
-  private static getContentFilesList = async (contentType: ContentTypeEnum): Promise<string[]> => {
+  private static async listProjectsNames(contentType: ContentTypeEnum): Promise<string[]> {
     try {
-      const path = this.contentFolderPath + contentType
-      const files = await readdir(path)
-      //return filtered file list: remove files names with bad extension and bad name pattern (ex: "001_", "012_" or "103_")
-      return files.filter((file) => file.endsWith(this.fileExtension) && /^\d{3}_/.test(file))
+      const directoryPath = this.contentFolderPath + contentType
+      const entries = await readdir(directoryPath, { withFileTypes: true })
+      return entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name)
     } catch (error) {
-      throw new Exception(`Could not list content in folder /${contentType}`, {
+      throw new Exception(`Could not load content: ${contentType}`, {
         code: 'E_NOT_FOUND',
         status: 404,
       })
     }
   }
 
-  private static getFileContent = async (
+  private static getDescription = async (
     contentType: ContentTypeEnum,
-    fileName: string
+    fileName: string,
+    language: string
+  ): Promise<string> => {
+    try {
+      const path = `${this.contentFolderPath}${contentType}/${fileName}/${language}.md`
+      const file = await readFile(path, { encoding: 'utf8' })
+      const md = new MarkdownFile(file)
+      await md.process()
+      return toHtml(md).contents
+    } catch (error) {
+      throw new Exception(`Could not read description file content called ${fileName}`, {
+        code: 'E_NOT_FOUND',
+        status: 404,
+      })
+    }
+  }
+
+  private static getStructureContent = async (
+    contentType: ContentTypeEnum,
+    fileName: string,
+    language: string
   ): Promise<ContentObject> => {
     try {
-      const path = `${this.contentFolderPath}${contentType}/${fileName}`
+      const path = `${this.contentFolderPath}${contentType}/${fileName}/structure.json`
       const file = JSON.parse(await readFile(path, 'utf8')) as RawContentObject
 
       //formatContent
-      file.title = this.formatString(file.title)
-      file.subtitle = this.formatString(file.subtitle)
-      file.description = this.formatString(file.description)
+      file.title = this.formatString(file.title, language)
+      file.subtitle = this.formatString(file.subtitle, language)
       file.mainImageH = this.renameImagesWithPath(contentType, file.mainImageH)
       file.mainImageV = this.renameImagesWithPath(contentType, file.mainImageV)
-      file.mainImageAlt = this.formatString(file.mainImageAlt)
+      file.mainImageAlt = this.formatString(file.mainImageAlt, language)
 
       file.images = file.images.map((img) => ({
         image: this.renameImagesWithPath(contentType, img.image),
-        alt: this.formatString(img.alt),
+        alt: this.formatString(img.alt, language),
       }))
 
       return { ...file, fileName } as ContentObject
@@ -121,14 +152,9 @@ export class ContentService {
     }
   }
 
-  private static formatString(rawString: string | LocalizedString): LocalizedString {
-    if (typeof rawString === 'string') {
-      const localizedObj: LocalizedString = {} as LocalizedString
-      for (const lang of this.languagesArray) {
-        localizedObj[lang as keyof LocalizedString] = rawString
-      }
-
-      return localizedObj
+  private static formatString(rawString: string | LocalizedString, language: string): string {
+    if (typeof rawString === 'object') {
+      return rawString[language]
     } else {
       return rawString
     }

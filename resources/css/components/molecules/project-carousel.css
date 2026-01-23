@@ -56,7 +56,7 @@ transform:  translateX(-50%);
     transform:  translateX(50%);
 }
 
-@media (width < 1400px) {
+@media (width < 1700px) {
     .project-carousel-container{
         height: 18rem;
     }
