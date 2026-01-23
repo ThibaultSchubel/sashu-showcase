@@ -15,7 +15,7 @@ export default class RetailController {
     const i18n = DetectLocalService.getI18n(language)
 
     //Get Content
-    const content = await ContentService.getContent(contentPath)
+    const content = await ContentService.getContent(contentPath, 'fr')
 
     console.log(content)
 

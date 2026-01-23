@@ -35,7 +35,7 @@ export default class ProjectDrawer {
 
       this.titleSpot.textContent = element.target.querySelector('h3').textContent
       this.subtitleSpot.textContent = element.target.querySelector('h5').textContent
-      this.descriptionSpot.textContent = element.target.querySelector('p').textContent
+      this.descriptionSpot.innerHTML = element.target.querySelector('p').textContent
 
 
     setTimeout(() => {

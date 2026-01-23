@@ -9,7 +9,10 @@
 
     <div class="project-content-container">
       <div class="project-content-list">
-        @!component('components/organisms/project.edge', { project: content[0], index: 0 })
+          @each(project in content)
+                  @!component('components/organisms/project.edge', { project })
+
+          @end
         @!component('components/organisms/about.edge', {i18n})
       </div>
         @!component('components/organisms/footer.edge', {i18n})

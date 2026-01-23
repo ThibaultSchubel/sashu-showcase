@@ -80,26 +80,48 @@
   max-height: 80vh;
 }
 
-.project-drawer-content-right > p {
+.project-drawer-description-spot {
   text-align: justify;
   text-justify: inter-word;
-  text-indent: 40px;
   font-family: 'sans';
   font-weight: 200;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.3;
   max-width: 1700px;
   overflow-y: auto;
   padding: 0 0.5rem ;
 }
 
+.project-drawer-description-spot p {
+  margin-bottom: 1.2rem;
+}
 
-@media (width < 1200px) {
+.project-drawer-description-spot a {
+  color: var(--color--primary);
+  font-weight: 600;
+}
+
+.project-drawer-description-spot strong {
+  font-weight: 600;
+}
+
+.project-drawer-description-spot li {
+  list-style: inside;
+  margin-bottom: 0.5rem;
+}
+
+.project-drawer-description-spot ul {
+  margin-bottom: 1.8rem;
+}
+
+
+@media (width < 1350px) {
   .project-drawer-content-font {
     padding: 2rem 2rem 3rem 2rem;
+    flex-direction: column;
   }
 
-  .project-drawer-content-right > p {
+  .project-drawer-description-spot{
     text-indent: 30px;
     font-size: 1.1rem;
     line-height: 1.3;
@@ -111,22 +133,6 @@
 
 }
 
-@media (width < 960px) {
-  .project-drawer-content-font {
-    padding: 2rem 2rem 3rem 2rem;
-  }
-
-  .project-drawer-content-right {
-    max-height: 60vh;
-  }
-}
-
-@media (width < 960px) and (orientation: portrait) {
-  .project-drawer-content-font{
-    flex-direction: column;
-  }
-}
-
 @media (width < 768px) {
   .project-drawer-content-font {
     padding: 1.5rem 1.5rem 3rem 1.5rem;
@@ -136,7 +142,7 @@
     flex-direction: column;
   }
 
-  .project-drawer-content-right > p {
+  .project-drawer-description-spot{
     text-indent: 30px;
     font-size: 1.1rem;
     line-height: 1.2;
@@ -150,7 +156,7 @@
     height: 80vh;
   }
 
-  .project-drawer-content-right > p {
+  .project-drawer-description-spot{
     overflow-y: hidden;
   }
 }
@@ -165,7 +171,7 @@
     max-height: 45vh;
   }
 
-  .project-drawer-content-right > p {;
+  .project-drawer-description-spot{;
     line-height: 1.2;
     padding: 0 0.5rem ;
   }
@@ -187,7 +193,7 @@
 
   }
 
-  .project-drawer-content-right > p {
+  .project-drawer-description-spot{
     padding-top: 0;
     padding-bottom: 2rem;
   }
@@ -221,7 +227,7 @@
     font-size: 0.6rem;
   }
 
-  .project-drawer-content-right > p {
+  .project-drawer-description-spot{
     font-size: 1rem;
     line-height: 1.2;
   }

@@ -1,0 +1,53 @@
+{
+  "title": "Nani Nails",
+  "subtitle": { "en":"1st store", "fr": "1ère boutique", "cz":"1. obchod"},
+  "mainImageH": "nani-nails_h.webp",
+  "mainImageV": "nani-nails_v.webp",
+  "mainImageAlt": {
+    "en": "Nani Nails shop interior",
+    "fr": "Intérieur de la boutique Nani Nails",
+    "cz": "Interiér obchodu Nani Nails"
+  },
+  "images": [
+    {
+      "image": "nani-nails_1.webp",
+      "alt": {
+        "en": "Nani Nails central stand",
+        "fr": "Gondole centrale Nani Nails",
+        "cz": "Stojan Nani Nails"
+      }
+    },
+    {
+      "image": "nani-nails_2.webp",
+      "alt": {
+        "en": "Nani Nails counter",
+        "fr": "Comptoir Nani Nails",
+        "cz": "Pult Nani Nails"
+      }
+    },
+    {
+      "image": "nani-nails_3.webp",
+      "alt": {
+        "en": "Nani Nails podium",
+        "fr": "Podium Nani Nails",
+        "cz": "Podium Nani Nails"
+      }
+    },
+    {
+      "image": "nani-nails_4.webp",
+      "alt": {
+        "en": "Nani Nails samples",
+        "fr": "Échantillons Nani Nails",
+        "cz": "Vzorky Nani Nails"
+      }
+    },
+    {
+      "image": "nani-nails_5.webp",
+      "alt": {
+        "en": "Nani Nails shelf",
+        "fr": "Tablette Nani Nails",
+        "cz": "Produkty Nani Nails"
+      }
+    }
+  ]
+}
