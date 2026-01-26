@@ -1,0 +1,53 @@
+{
+  "title": "Alza.at",
+  "subtitle": { "en":"Showroom - Vienna", "fr": "Showroom - Vienne", "cz":"Showroom - Vídeň"},
+  "mainImageH": "alza_h.webp",
+  "mainImageV": "alza_v.webp",
+  "mainImageAlt": {
+    "en": "Showroom - Vienna",
+    "fr": "Showroom - Vienne",
+    "cz": "Showroom - Vídeň"
+  },
+  "images": [
+    {
+      "image": "alza_1.webp",
+      "alt": {
+        "en": "Alza.at - idea 1",
+        "fr": "Alza.at - idée 1",
+        "cz": "Alza.at - 1. nápad"
+      }
+    },
+    {
+      "image": "alza_2.webp",
+      "alt": {
+        "en": "Alza.at - idea 2",
+        "fr": "Alza.at - idée 2",
+        "cz": "Alza.at - 2. nápad"
+      }
+    },
+    {
+      "image": "alza_3.webp",
+      "alt": {
+        "en": "Alza.at - vue 1",
+        "fr": "Alza.at - vue 1",
+        "cz": "Alza.at - výhled 1"
+      }
+    },
+    {
+      "image": "alza_4.webp",
+      "alt": {
+        "en": "Alza.at - vue 2",
+        "fr": "Alza.at - vue 2",
+        "cz": "Alza.at - výhled 2"
+      }
+    },
+    {
+      "image": "alza_5.webp",
+      "alt": {
+        "en": "Alza.at - coffee shop",
+        "fr": "Alza.at - café",
+        "cz": "Alza.at - kavárna"
+      }
+    }
+  ]
+}

@@ -38,13 +38,16 @@
 }
 
 .project-drawer-container-stack {
+  max-width: 1000px;
   width: 100%;
   display: block;
   background-color: var(--color--black);
   box-shadow: var(--color--black) 0 2px 15px 0;
-  max-height: 100vh;
-  padding: 0 2rem 5rem 2rem;
+  max-height: 95vh;
+  padding: 0 2rem 3rem 2rem;
   transform: translateY(5em);
+  overflow: hidden;
+
 }
 
 
@@ -53,31 +56,28 @@
 .project-drawer-content {
   pointer-events: auto;
   width: 100%;
-  background-color: var(--color--black);
 }
 
 .project-drawer-content-font {
   border: 2px solid var(--color--white);
-  border-radius: var(--project-drawer--panel-radius) var(--project-drawer--panel-radius) 0 0;
-  padding: 2.5rem 2.5rem 5rem 2.5rem;
+  border-radius: var(--project-drawer--panel-radius);
+  padding-top: 2rem;
   width: 100%;
-  display: flex;
-  justify-content: stretch;
-  align-items: center;
+  display: block;
   background-color: var(--color--background);
-  gap: 2rem;
 }
 
 
-.project-drawer-content-left {
-  padding: 0 10%;
-}
-
-.project-drawer-content-right {
-  padding: 0;
+.project-drawer-content-top {
+  padding-bottom: 3rem;
   display: flex;
   justify-content: center;
-  max-height: 80vh;
+}
+
+.project-drawer-content-bottom {
+  display: block;
+  padding-bottom: 2rem;
+  overflow-y: hidden;
 }
 
 .project-drawer-description-spot {
@@ -88,8 +88,9 @@
   font-size: 1.1rem;
   line-height: 1.3;
   max-width: 1700px;
-  overflow-y: auto;
-  padding: 0 0.5rem ;
+  overflow-y:scroll;
+  max-height: 30vh;
+  padding: 0 2.5rem 2rem 2.5rem;
 }
 
 .project-drawer-description-spot p {
@@ -115,123 +116,18 @@
 }
 
 
-@media (width < 1350px) {
-  .project-drawer-content-font {
-    padding: 2rem 2rem 3rem 2rem;
-    flex-direction: column;
-  }
-
-  .project-drawer-description-spot{
-    text-indent: 30px;
-    font-size: 1.1rem;
-    line-height: 1.3;
-    max-width: 1700px;
-    max-height: 100%;
-    overflow-y: auto;
-    padding: 0 0.5rem ;
-  }
-
-}
-
 @media (width < 768px) {
+  .project-drawer-container-stack {
+    padding: 0;
+  }
+
   .project-drawer-content-font {
-    padding: 1.5rem 1.5rem 3rem 1.5rem;
+    border: 2px solid var(--color--white);
+    border-radius: var(--project-drawer--panel-radius)  var(--project-drawer--panel-radius) 0 0;
+    padding-top: 1.5rem;
   }
 
-  .project-drawer-content-font{
-    flex-direction: column;
-  }
-
-  .project-drawer-description-spot{
-    text-indent: 30px;
-    font-size: 1.1rem;
-    line-height: 1.2;
+  .project-drawer-description-spot {
+    padding: 0 1.5rem;
   }
 }
-
-@media (width < 960px) and (orientation: landscape) {
-  .project-drawer-content-font{
-    overflow-y: auto;
-
-    height: 80vh;
-  }
-
-  .project-drawer-description-spot{
-    overflow-y: hidden;
-  }
-}
-
-
-@media (width < 480px) {
-  .project-drawer-content-font {
-    padding: 1rem 1rem 2rem 1rem;
-  }
-
-  .project-drawer-content-right {
-    max-height: 45vh;
-  }
-
-  .project-drawer-description-spot{;
-    line-height: 1.2;
-    padding: 0 0.5rem ;
-  }
-}
-
-@media (width < 480px) and (orientation: portrait) {
-
-  .project-drawer-content-right {
-    max-height: 40vh;
-  }
-}
-
-/*
-@media (width < 1200px)  and (orientation: portrait) {
-  .project-drawer-content {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 2rem 5rem 2rem;
-
-  }
-
-  .project-drawer-description-spot{
-    padding-top: 0;
-    padding-bottom: 2rem;
-  }
-}
-
-
-@media  (width < 768px){
-  .project-drawer-content {
-    gap: 1rem;
-    padding: 2rem 2rem 3rem 2rem;
-  }
-
-  .project-drawer-content {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 2rem 5rem 2rem;
-
-  }
-}
-
-@media (width < 480px) {
-  .project-drawer-title-container > h3 {
-    font-size: 1rem;
-  }
-
-  .project-drawer-content {
-    padding: 1rem 1rem 4rem 1rem;
-  }
-
-  .project-drawer-title-container > h5 {
-    font-size: 0.6rem;
-  }
-
-  .project-drawer-description-spot{
-    font-size: 1rem;
-    line-height: 1.2;
-  }
-}
-*/
-
-

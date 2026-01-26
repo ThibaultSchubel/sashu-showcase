@@ -1,0 +1,53 @@
+{
+  "title": "Don Pealo",
+  "subtitle": { "en":"Point of sales redesign", "fr": "Redesign des points de ventes", "cz":"redesign prodejních míst"},
+  "mainImageH": "don-pealo_h.webp",
+  "mainImageV": "don-pealo_v.webp",
+  "mainImageAlt": {
+    "en": "Don Pealo - Mall Černý most - Prague",
+    "fr": "Don Pealo - CC Černý most - Prague",
+    "cz": "Don Pealo - OC Černý most - Praha"
+  },
+  "images": [
+    {
+      "image": "don-pealo_1.webp",
+      "alt": {
+        "en": "Don Pealo - Gondola",
+        "fr": "Don Pealo - Gondole",
+        "cz": "Don Pealo - Gondola"
+      }
+    },
+    {
+      "image": "don-pealo_2.webp",
+      "alt": {
+        "en": "Don Pealo - Cigars",
+        "fr": "Don Pealo - Cigars",
+        "cz": "Don Pealo - Cigary"
+      }
+    },
+    {
+      "image": "don-pealo_3.webp",
+      "alt": {
+        "en": "Don Pealo - Mall Černý most - Prague",
+        "fr": "Don Pealo - CC Černý most - Prague",
+        "cz": "Don Pealo - OC Černý most - Praha"
+      }
+    },
+    {
+      "image": "don-pealo_4.webp",
+      "alt": {
+        "en": "Don Pealo - Mall Churchill - Prague",
+        "fr": "Don Pealo - CC Churchill - Prague",
+        "cz": "Don Pealo - OC Churchill - Praha"
+      }
+    },
+    {
+      "image": "don-pealo_5.webp",
+      "alt": {
+        "en": "Don Pealo - Hat",
+        "fr": "Don Pealo - Chapeau",
+        "cz": "Don Pealo - Klobouk"
+      }
+    }
+  ]
+}

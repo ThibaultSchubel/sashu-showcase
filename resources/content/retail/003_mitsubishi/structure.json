@@ -1,0 +1,53 @@
+{
+  "title": "Mitsubishi Motors",
+  "subtitle": { "en":"Showrooms in Czech Republic et Slovakia", "fr": "Showrooms en République Tchèque et Slovaquie", "cz":"Showroomy v České republice a na Slovensku"},
+  "mainImageH": "mitsubishi_h.webp",
+  "mainImageV": "mitsubishi_v.webp",
+  "mainImageAlt": {
+    "en": "Mitsubishi Motors - Jihlava",
+    "fr": "Mitsubishi Motors - Jihlava",
+    "cz": "Mitsubishi Motors - Jihlava"
+  },
+  "images": [
+    {
+      "image": "mitsubishi_1.webp",
+      "alt": {
+        "en": "Mitsubishi Motors - elements",
+        "fr": "Mitsubishi Motors - éléments",
+        "cz": "Mitsubishi Motors - prvky"
+      }
+    },
+    {
+      "image": "mitsubishi_2.webp",
+      "alt": {
+        "en": "Mitsubishi Motors - Jihlava",
+        "fr": "Mitsubishi Motors - Jihlava",
+        "cz": "Mitsubishi Motors - Jihlava"
+      }
+    },
+    {
+      "image": "mitsubishi_3.webp",
+      "alt": {
+        "en": "Mitsubishi Motors - concept",
+        "fr": "Mitsubishi Motors - concept",
+        "cz": "Mitsubishi Motors - koncept"
+      }
+    },
+    {
+      "image": "mitsubishi_4.webp",
+      "alt": {
+        "en": "Mitsubishi Motors - concept",
+        "fr": "Mitsubishi Motors - concept",
+        "cz": "Mitsubishi Motors - koncept"
+      }
+    },
+    {
+      "image": "mitsubishi_5.webp",
+      "alt": {
+        "en": "Mitsubishi Motors - Jihlava",
+        "fr": "Mitsubishi Motors - Jihlava",
+        "cz": "Mitsubishi Motors - Jihlava"
+      }
+    }
+  ]
+}
