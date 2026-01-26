@@ -1,12 +1,12 @@
 .project-carousel-container{
     width: 100%;
+    max-width: 65vw;
+    max-height: 32vh;
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: 100%;
     justify-content: center;
-    height: 25rem;
     pointer-events: none;
-
 }
 
 .project-carousel-container > *{
@@ -49,43 +49,11 @@
 }
 
 .project-carousel-buttons> div:first-child{
-transform:  translateX(-50%);
+transform:  translateX(-20%);
 }
 
 .project-carousel-buttons> div:last-child{
-    transform:  translateX(50%);
-}
-
-@media (width < 1700px) {
-    .project-carousel-container{
-        height: 18rem;
-    }
-}
-
-@media (width < 1200px) {
-    .project-carousel-container{
-        height: 14rem;
-    }
-}
-
-@media (width < 960px) {
-    .project-carousel-container{
-
-        height: 14rem;
-    }
-}
-
-
-@media (width < 768px) {
-    .project-carousel-container{
-        height: 12rem;
-    }
-}
-
-@media (width < 480px) {
-    .project-carousel-container{
-        height: 12rem;
-    }
+    transform:  translateX(20%);
 }
 
 

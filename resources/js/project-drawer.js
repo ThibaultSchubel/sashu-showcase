@@ -41,7 +41,7 @@ export default class ProjectDrawer {
     setTimeout(() => {
       if (this.firstLayer) {
         this.firstLayer.style.transition = `transform ${this.duration}ms`
-        this.firstLayer.style.transform = `translateY(5rem)`
+        this.firstLayer.style.transform = `translateY(1rem)`
       }
 
       if (this.secondLayer) {

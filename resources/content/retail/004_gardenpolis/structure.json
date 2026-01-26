@@ -1,0 +1,53 @@
+{
+  "title": "Gardenpolis",
+  "subtitle": { "en":"Garden center - Bruntál (CZ)", "fr": "Jardinerie - Bruntál (CZ)", "cz":"Zahradní centrum - Bruntál"},
+  "mainImageH": "gardenpolis_h.webp",
+  "mainImageV": "gardenpolis_v.webp",
+  "mainImageAlt": {
+    "en": "Enter - Gardenpolis",
+    "fr": "Entrée - Gardenpolis",
+    "cz": "Vstup - Gardenpolis"
+  },
+  "images": [
+    {
+      "image": "gardenpolis_1.webp",
+      "alt": {
+        "en": "Gardenpolis - Navigation",
+        "fr": "Gardenpolis - Navigation",
+        "cz": "Gardenpolis - Navigace"
+      }
+    },
+    {
+      "image": "gardenpolis_2.webp",
+      "alt": {
+        "en": "Gardenpolis - Enter",
+        "fr": "Gardenpolis - Entrée",
+        "cz": "Gardenpolis - Vstup"
+      }
+    },
+    {
+      "image": "gardenpolis_3.webp",
+      "alt": {
+        "en": "Gardenpolis - Coffee shop",
+        "fr": "Gardenpolis - Café",
+        "cz": "Gardenpolis - Kavárna"
+      }
+    },
+    {
+      "image": "gardenpolis_4.webp",
+      "alt": {
+        "en": "Gardenpolis - Cash desk",
+        "fr": "Gardenpolis - Caisses",
+        "cz": "Gardenpolis - Pokladna"
+      }
+    },
+    {
+      "image": "gardenpolis_5.webp",
+      "alt": {
+        "en": "Gardenpolis - Coffee shop",
+        "fr": "Gardenpolis - Café",
+        "cz": "Gardenpolis - Kavárna"
+      }
+    }
+  ]
+}

@@ -77,7 +77,7 @@ export class ContentService {
         return contentObjects.sort((a, b) => {
           const numA = Number.parseInt(a.fileName.split('-')[0], 10)
           const numB = Number.parseInt(b.fileName.split('-')[0], 10)
-          return numA - numB
+          return numB - numA
         })
       } else {
         return []
