@@ -1,5 +1,3 @@
-En 2019, Mitsubishi Motors a dévoilé sa nouvelle identité visuelle, incluant une refonte complète de ses showrooms.
+In 2019,  [Mitsubishi Motors](https://www.mitsubishi-motors.cz/) unveiled its new visual identity, including a complete redesign of its showrooms. SaShu for Retail was commissioned to adapt this concept to the Czech and Slovak markets, implementing it across 44 local dealerships.
 
-SaShu for Retail a été missionnée pour adapter ce concept aux marchés tchèque et slovaque, en l’appliquant aux 44 concessionnaires locaux.
-
-Nous avons coordonné la mise en œuvre du projet, veillé à la conformité avec le design initial, et travaillé en collaboration avec le siège japonais pour garantir une cohérence globale de la marque.
+We coordinated the project’s execution, ensured compliance with the original design, and collaborated closely with the Japanese headquarters to maintain the brand’s global consistency.

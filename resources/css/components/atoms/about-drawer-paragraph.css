@@ -1,10 +1,27 @@
-.about-drawer-paragraph-container > p {
+.about-drawer-paragraph-container > * {
     text-align: justify;
     text-justify: inter-word;
-    text-indent: 40px;
     font-family: "sans";
     font-weight: 200;
     font-size: 1.2rem;
     white-space: pre-line;
     line-height: 1.2;
+}
+
+.about-drawer-paragraph-container p {
+    margin-bottom: 0.8rem;
+}
+
+.about-drawer-paragraph-container strong {
+    font-weight: 600;
+}
+
+.about-drawer-paragraph-container li {
+    list-style: inside;
+    margin-bottom: 0.5rem;
+}
+.about-drawer-paragraph-container ul {
+    margin-bottom: 0.3rem;
+    margin-left: 0.8rem;
+
 }

@@ -1,0 +1,23 @@
+{
+  "title": { "en": "Smart display", "fr": "Présentoir intéractif", "cz": "Interaktivní stojan" },
+  "subtitle": { "en":"Demonstrator", "fr": "Démonstrateur", "cz":"Demonstrátor"},
+  "mainImageH": "k1_h.webp",
+  "mainImageV": "k1_v.webp",
+  "mainImageAlt": {
+    "en": "video games in shops",
+    "fr": "jeux vidéos en point de vente",
+    "cz": "video hry v obchodě"
+  },
+  "video": {
+    "src": {
+      "en": "k1_fr.mp4",
+      "fr": "k1_fr.mp4",
+      "cz": "k1_fr.mp4"
+    },
+    "alt": {
+      "en": "video games in shops",
+      "fr": "jeux vidéos en point de vente",
+      "cz": "video hry v obchodě"
+    }
+  }
+}

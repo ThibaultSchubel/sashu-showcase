@@ -1,6 +1,7 @@
 export default class ProjectDrawer {
   duration = 800
   projectDrawer
+  projectDrawerVideo
   background
 
   firstLayer
@@ -27,6 +28,12 @@ export default class ProjectDrawer {
 
     this.closeWithoutAnimations()
 
+    this.projectDrawerVideo = document.querySelector('#project-video')
+
+    if (this.projectDrawerVideo) {
+      this.projectDrawerVideo.style.display = 'none';
+    }
+
     if (this.background) this.background.style.transition = `opacity ${this.duration}ms ease-out`
   }
 
@@ -36,6 +43,22 @@ export default class ProjectDrawer {
       this.titleSpot.textContent = element.target.querySelector('h3').textContent
       this.subtitleSpot.textContent = element.target.querySelector('h5').textContent
       this.descriptionSpot.innerHTML = element.target.querySelector('p').textContent
+
+    const videoElement = element.target.querySelector('video')
+
+
+    if (videoElement && this.projectDrawerVideo) {
+
+
+      const videoSrc = videoElement.querySelector('source').getAttribute('src')
+      const drawerVideoMediaElement = this.projectDrawerVideo.querySelector('source')
+      drawerVideoMediaElement.setAttribute('src', videoSrc)
+      this.projectDrawerVideo.style.display = 'flex'
+      this.projectDrawerVideo.load()
+
+    } else if (this.projectDrawerVideo) {
+      this.projectDrawerVideo.style.display = 'none'
+    }
 
 
     setTimeout(() => {
@@ -71,6 +94,12 @@ export default class ProjectDrawer {
     this.background.style.opacity = 0
 
     window.setTimeout(() => {
+
+      if (this.projectDrawerVideo) {
+        this.projectDrawerVideo.pause()
+        this.projectDrawerVideo.style.display = 'none'
+      }
+
       this.projectDrawer.style.display = `none`
     }, this.duration + 10)
   }

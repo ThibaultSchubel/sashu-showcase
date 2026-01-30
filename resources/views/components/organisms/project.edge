@@ -3,20 +3,29 @@
 
   <div class="project-data" id="project-data">
     <h3>
-       {{project.title}}
+      {{ project.title }}
     </h3>
     <h5>
-       {{project.subtitle}}
+      {{ project.subtitle }}
     </h5>
     <p>
-      {{project.description}}
+      {{ project.description }}
     </p>
 
-    <div id="project-data-imgs">
-      @each(image in project.images)
-           <img src={{image.image}} alt={{image.alt}} />
-      @end
-    </div>
+    @if(project.images)
+      <div id="project-data-imgs">
+        @each(image in project.images)
+          <img src={{image.image}} alt=image.alt />
+        @end
+      </div>
+    @end
+
+     @if(project.video)
+           <video>
+               <source src={{project.video.src}} type="video/webm" />
+            </video>
+     @end
+
 
   </div>
 
