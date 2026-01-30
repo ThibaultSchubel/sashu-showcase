@@ -2,10 +2,12 @@ export default class ProjectCarousel {
   panels = []
   images = []
   hoverDuration = 300
-  animationDuration = 1000
+  animationDuration = 600
 
   leftWingAnimationName = 'leftImage_anim'
   rightWingAnimationName = 'rightImage_anim'
+
+  carouselComponent
 
   panelsHoverTransform = [
     `translateX(-30%) perspective(100rem) rotateY(60deg)  scale(0.9)`,
@@ -34,7 +36,10 @@ export default class ProjectCarousel {
   ]
 
   constructor() {
-    if (document.querySelector('#project-carousel-stack')){
+
+    this.carouselComponent = document.querySelector('#project-carousel')
+
+    if (this.carouselComponent && document.querySelector('#project-carousel-stack')) {
       this.panels = Array.from(document.querySelector('#project-carousel-stack').children)
 
       this.panels.forEach((panel, index) => {
@@ -47,13 +52,21 @@ export default class ProjectCarousel {
   }
 
   populatePanels(element) {
-    const images = Array.from(element.target.querySelector('#project-data-imgs').children)
-    let imgIndex = 0
-    this.panels.forEach((panel) => {
-      panel.querySelector('img').src = images[imgIndex].src
-      imgIndex++
-      if (imgIndex > images.length - 1) imgIndex = 0
-    })
+    const imagesSelector = element.target.querySelector('#project-data-imgs')
+    if (imagesSelector) {
+      const images = Array.from(imagesSelector.children)
+      this.carouselComponent.style.display = 'grid'
+      let imgIndex = 0
+      this.panels.forEach((panel) => {
+        panel.querySelector('img').src = images[imgIndex].src
+        imgIndex++
+        if (imgIndex > images.length - 1) imgIndex = 0
+      })
+    } else {
+      //If, no images, we dont display the caroussel
+      this.carouselComponent.style.display = 'none'
+    }
+
   }
 
   changeImage(indent) {

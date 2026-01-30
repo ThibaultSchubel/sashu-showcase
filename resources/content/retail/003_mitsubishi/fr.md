@@ -1,4 +1,4 @@
-En 2019, Mitsubishi Motors a dévoilé sa nouvelle identité visuelle, incluant une refonte complète de ses showrooms.
+En 2019, [Mitsubishi Motors](https://www.mitsubishi-motors.cz/) a dévoilé sa nouvelle identité visuelle, incluant une refonte complète de ses showrooms.
 
 SaShu for Retail a été missionnée pour adapter ce concept aux marchés tchèque et slovaque, en l’appliquant aux 44 concessionnaires locaux.
 

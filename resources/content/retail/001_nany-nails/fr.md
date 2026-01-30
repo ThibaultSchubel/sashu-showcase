@@ -1,4 +1,4 @@
-À l’origine distributeur B2B de produits de manucure, [Nani Nails](https://www.naninails.cz/)  souahaite lançant son propre réseau de points de vente à travers la République tchèque et la Slovaquie.
+À l’origine distributeur B2B de produits de manucure, [Nani Nails](https://www.naninails.cz/) souhaite lançant son propre réseau de points de vente à travers la République tchèque et la Slovaquie.
 Nous avons été mandater pour concevoir le premier magasin pilote, qui servirait de référence pour l’ensemble des futures enseignes.
 
 L’approche créative repose sur trois piliers :

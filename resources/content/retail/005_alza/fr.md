@@ -1,4 +1,4 @@
-Pour son nouveau point de vente au centre de Vienne, Alza, le leader tchèque de la distribution de produits électroniques, voulait espace articulé sur trois composantes:
+Pour son nouveau point de vente au centre de Vienne, [Alza](https://www.alza.at/), le leader tchèque de la distribution de produits électroniques, voulait espace articulé sur trois composantes:
 * un café.
 * un comptoir pour le retrait des produits.
 * un espace dédié à présentation de composants pour PC.

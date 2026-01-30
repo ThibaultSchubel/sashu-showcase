@@ -1,0 +1,23 @@
+{
+  "title": { "en": "Video game", "fr": "Jeux Videos", "cz": "Video hry" },
+  "subtitle": { "en":"in point of sales", "fr": "en point de vente", "cz":"v obchodě"},
+  "mainImageH": "cow_h.webp",
+  "mainImageV": "cow_v.webp",
+  "mainImageAlt": {
+    "en": "video games in shops",
+    "fr": "jeux vidéos en point de vente",
+    "cz": "video hry v obchodě"
+  },
+  "video": {
+    "src": {
+      "en": "k1_fr.mp4",
+      "fr": "k1_fr.mp4",
+      "cz": "k1_fr.mp4"
+    },
+    "alt": {
+      "en": "video games in shops",
+      "fr": "jeux vidéos en point de vente",
+      "cz": "video hry v obchodě"
+    }
+  }
+}

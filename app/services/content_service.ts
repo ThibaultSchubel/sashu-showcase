@@ -8,6 +8,11 @@ interface ContentImageObject {
   alt: string
 }
 
+interface ContentVideoObject {
+  src: string
+  alt: string
+}
+
 interface LocalizedString {
   en: string
   fr: string
@@ -20,10 +25,15 @@ interface RawContentObject {
   mainImageH: string
   mainImageV: string
   mainImageAlt: string | LocalizedString
-  images: {
+  images?: {
     image: string
     alt: string | LocalizedString
   }[]
+
+  video?: {
+    src: string
+    alt: string | LocalizedString
+  }
 }
 
 interface ContentObject {
@@ -34,7 +44,8 @@ interface ContentObject {
   mainImageV: string
   description: string
   mainImageAlt: string
-  images: ContentImageObject[]
+  images?: ContentImageObject[]
+  video: ContentVideoObject
 }
 
 export enum ContentTypeEnum {
@@ -45,6 +56,7 @@ export enum ContentTypeEnum {
 export class ContentService {
   private static contentFolderPath = 'resources/content/'
   private static imagesFolderPath = '/images/'
+  private static videosFolderPath = '/video/'
 
   public static async getContent(
     contentType: ContentTypeEnum,
@@ -53,13 +65,11 @@ export class ContentService {
     try {
       //const filesList = await this.getContentFilesList(contentType)
       const projects = await this.listProjectsNames(contentType)
-
       if (projects.length > 0) {
         const contentObjects: ContentObject[] = await Promise.all(
           projects.map(async (project) => {
             const structure = await this.getStructureContent(contentType, project, language)
             const description = await this.getDescription(contentType, project, language)
-            console.log(description)
 
             return {
               fileName: project,
@@ -70,6 +80,7 @@ export class ContentService {
               mainImageV: structure.mainImageV,
               mainImageAlt: structure.mainImageAlt,
               images: structure.images,
+              video: structure.video,
             }
           })
         )
@@ -96,7 +107,7 @@ export class ContentService {
       const entries = await readdir(directoryPath, { withFileTypes: true })
       return entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name)
     } catch (error) {
-      throw new Exception(`Could not load content: ${contentType}`, {
+      throw new Exception(`Could not list projects names content: ${contentType}`, {
         code: 'E_NOT_FOUND',
         status: 404,
       })
@@ -125,7 +136,7 @@ export class ContentService {
   private static getStructureContent = async (
     contentType: ContentTypeEnum,
     fileName: string,
-    language: string
+    language: keyof LocalizedString
   ): Promise<ContentObject> => {
     try {
       const path = `${this.contentFolderPath}${contentType}/${fileName}/structure.json`
@@ -138,10 +149,20 @@ export class ContentService {
       file.mainImageV = this.renameImagesWithPath(contentType, file.mainImageV)
       file.mainImageAlt = this.formatString(file.mainImageAlt, language)
 
-      file.images = file.images.map((img) => ({
-        image: this.renameImagesWithPath(contentType, img.image),
-        alt: this.formatString(img.alt, language),
-      }))
+      if (file.images) {
+        file.images = file.images.map((img) => ({
+          image: this.renameImagesWithPath(contentType, img.image),
+          alt: this.formatString(img.alt, language),
+        }))
+      } else if (file.video) {
+
+        const formatedVideoName = this.formatString(file.video.src, language)
+
+        file.video = {
+          src: this.renameVideoWithPath(formatedVideoName),
+          alt: this.formatString(file.video.alt, language),
+        }
+      }
 
       return { ...file, fileName } as ContentObject
     } catch (error) {
@@ -152,11 +173,16 @@ export class ContentService {
     }
   }
 
-  private static formatString(rawString: string | LocalizedString, language: string): string {
-    if (typeof rawString === 'object') {
+  private static formatString(
+    rawString: string | LocalizedString,
+    language: keyof LocalizedString
+  ): string {
+    if (typeof rawString === 'object' && rawString && language in rawString) {
       return rawString[language]
-    } else {
+    } else if (typeof rawString === 'string') {
       return rawString
+    } else {
+      return ''
     }
   }
 
@@ -165,5 +191,11 @@ export class ContentService {
     imageName: string
   ): string => {
     return `${this.imagesFolderPath}${contentType}/${imageName}`
+  }
+
+  private static renameVideoWithPath = (
+    videoName: string
+  ): string => {
+    return `${this.videosFolderPath}${videoName}`
   }
 }

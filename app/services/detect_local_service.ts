@@ -37,8 +37,6 @@ export class DetectLocalService {
    */
   static getI18n(language: string): I18n | null {
     const availableLanguages = Object.keys(i18nManager.getTranslations())
-    return availableLanguages.includes(language)
-      ? i18nManager.locale(language)
-      : null
+    return availableLanguages.includes(language) ? i18nManager.locale(language) : null
   }
 }

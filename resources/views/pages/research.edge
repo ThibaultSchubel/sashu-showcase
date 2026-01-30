@@ -5,6 +5,19 @@
         @!component('components/organisms/curtain.edge')
         @!component('components/organisms/navbar.edge', { i18n, currentLocale, path})
         @!component('components/organisms/menu.edge', { i18n, currentLocale, path})
-        <!--<img class="drawer-media__source" src="public/images/3-h.jpg" alt=""/>-->
+
+         <div class="project-content-container">
+              <div class="project-content-list">
+                @each((project, index) in content)
+                  @!component('components/organisms/project.edge', { i18n,project })
+                  @if(index === 0)
+                    @!component('components/organisms/about.edge', {i18n, aboutContent})
+                  @end
+                @end
+              </div>
+              @!component('components/organisms/footer.edge', {i18n})
+            </div>
+            @!component('components/molecules/project-drawer.edge', { project })
+
     @endslot
 @end
