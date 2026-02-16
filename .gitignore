@@ -11,6 +11,8 @@ tmp
 
 # Frontend assets compiled code
 public/assets
+public/video
+public/images
 
 # Build tools specific
 npm-debug.log
@@ -25,3 +27,4 @@ yarn-error.log
 .DS_Store
 
 Makefile
+
