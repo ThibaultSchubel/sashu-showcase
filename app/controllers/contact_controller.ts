@@ -12,6 +12,8 @@ export default class ContactController {
     const i18n = DetectLocalService.getI18n(language)
     if (i18n) {
       return view.render('pages/contact', { i18n, currentLocale: language, path: 'contact' })
+    } else {
+      return view.render('pages/errors/server-error')
     }
   }
 }
