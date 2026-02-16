@@ -1,4 +1,4 @@
-.about-paragraph-p{
+.about-paragraph-p {
     text-align: justify;
     text-justify: inter-word;
     text-indent: 40px;
@@ -6,7 +6,23 @@
     font-weight: 200;
     font-size: 1.4rem;
     white-space: pre-line;
-    line-height: 1.8;
+    line-height: 1.4;
+}
+
+.about-paragraph strong {
+    font-weight: 600;
+}
+
+.about-paragrapht-p li {
+    list-style: inside;
+    margin-bottom: 0.5rem;
+
+}
+
+.about-paragraph-p ul {
+    margin-bottom: 0.8rem;
+    line-height: 1;
+
 }
 
 @media (width < 1400px) {

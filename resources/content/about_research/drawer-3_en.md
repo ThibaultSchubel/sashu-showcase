@@ -1,7 +1,8 @@
-You can choose to manage the realization of your project or leverage our partners for:
+We have a small prototyping workshop equipped with:
 
-* Prototyping and concept validation,
-* Manufacturing and installation of furniture and POS displays,
-* Design and fit-out of your retail spaces.
+* A 3D printer,
+* A CNC milling machine,
+* A laser engraver,
+* All the necessary tools for fabricating and assembling electronic circuit boards (prototypes).
 
-The SaShu team will be by your side at every step of the process.
+For everything else (wood, metal, plastic, etc.), we rely on our trusted partners.

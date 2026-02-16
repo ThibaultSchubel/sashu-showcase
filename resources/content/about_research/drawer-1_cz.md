@@ -1,3 +1,5 @@
-Provádíme hloubkovou analýzu vaší identity značky, hodnot a ambicí, stejně jako dynamiky vašeho trhu a pozic vašich konkurentů. Tato studie nám umožňuje identifikovat klíčové poznatky, které budou směrovat fázi návrhu.
+Stojany, obchodní navigace a prodejní místa se dnes musí integrovat do multikanálové strategie spotřeby. Odpovědí na tuto změnu je Smart Retail.
 
-Zavazujeme se zůstat na špici našeho oboru tím, že průběžně aktualizujeme své znalosti, objevujeme nové materiály a výrobní techniky, analyzujeme současné trendy a předvídáme ty budoucí.
+__Smart Retail__ znamená integraci pokročilých technologií (IoT, umělá inteligence, big data, automatizace atd.) do prodejních míst za účelem optimalizace zákaznického zážitku, zlepšení provozní efektivity a posílení viditelnosti značek.
+
+Cílem je vytvořit inteligentní, propojená a personalizovaná obchodní prostředí.

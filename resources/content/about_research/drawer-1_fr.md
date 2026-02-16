@@ -1,3 +1,5 @@
-Nous analysons en profondeur votre identité de marque, vos valeurs et vos ambitions, les dynamiques de votre marché et les positionnements de vos concurrents. Cette étude nous permet de dégager des points  clés pour l'étape de conception .
+La PLV et le point de vente doivent aujourd'hui s'intégrer dans une stratégie de consommation multicanale. LA réponse a ce changement est le Samart Retail.
 
-Nous nous engageons à rester à la pointe de notre domaine en actualisant nos connaissances, en recherchant de nouveaux matériaux et techniques de fabrication, en analysant les tendances actuelles et en anticipant celles de demain. 
+__Le Smart Retail :__ c'est l’intégration des technologies avancées (IoT, IA, big data, automatisation, etc.) dans les points de vente pour optimiser l’expérience client, améliorer l’efficacité opérationnelle et renforcer la visibilité des enseignes.
+
+L’objectif est de créer des environnements commerciaux intelligents, connectés et personnalisés.

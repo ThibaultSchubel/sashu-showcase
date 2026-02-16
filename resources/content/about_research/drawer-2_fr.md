@@ -1,5 +1,4 @@
-Pour vous, nous concevons des espaces et des solutions qui transforment l’expérience client et renforcent votre marque :
-
-* __Des points de vente emblématiques :__ Des espaces sur mesure qui incarnent l’identité de votre marque, mettent en scène vos produits et optimisent le parcours client. Chaque détail est pensé pour s’intégrer harmonieusement dans une stratégie de vente multicanal, en alliant esthétique, fonctionnalité et émotion.
-* __Des présentoirs et de la PLV innovants :__ Des solutions impactantes et distinctives, conçues pour vous différencier de la concurrence et maximiser votre visibilité. Que ce soit par le design, les matériaux ou l’interactivité, nous créons des supports qui captent l’attention et renforcent l’engagement.
-* __Des expériences interactives uniques :__ Grâce à notre double expertise en conception logicielle et en développement de solutions électroniques, nous intégrons des technologies immersives (bornes tactiles, jeux, installations connectées, etc.) pour créer des interactions mémorables avec vos clients.
+Nous disposons d'un large éventail de compétences pour mettre en œuvre le Smart Retail
+* Technologies web (JS, React, Node JS)
+* Logiciels sur mini ordinateurs: JS (Electron), C++, Unity
+* Programmation embarqué avec le framework platform IO

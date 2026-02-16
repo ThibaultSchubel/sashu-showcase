@@ -32,6 +32,8 @@ export default class ResearchController {
         content,
         aboutContent,
       })
+    } else {
+      return view.render('pages/errors/server-error')
     }
   }
 }

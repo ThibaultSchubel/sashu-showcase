@@ -1,14 +1,17 @@
-For a Prague-based POS material  design studio, we developed an innovative and interactive demonstrator.
+To demonstrate our expertise in software development and electronics, we designed an intelligent cosmetic display. This project showcases our ability to blend design, interactivity, and advanced technologies to create an immersive and personalized customer experience.
 
-The system is built on a simple yet powerful architecture:
-* A screen,
-* A mini-computer,
-* A webcam.
-* 
-Inspired by the Space Invaders universe, the game casts the player as a missile launch base, tasked with destroying asteroids sent by aliens—while carefully avoiding cows.
+The display integrates several technologies:
 
-Designed for retail environments, this demonstrator offers contactless interaction: players control the game solely through head movements, detected in real time by the webcam. The system can even recognize returning players, enabling personalized experiences.
+* A __touchscreen__ with a custom, intuitive, and aesthetically pleasing graphical interface,
+* __Distance sensors__ to detect the presence of a customer in front of the display,
+* __Addressable LEDs__ for dynamic and customizable light animations,
+* __RFID readers__ to identify displayed products and trigger targeted interactions. 
 
-Fully customizable, it can be tailored to match a brand’s colors and visual identity.
+A smooth and engaging interaction scenario:
 
-Beyond entertainment, the demonstrator collects demographic data (such as player gender and estimated age), providing brands with valuable insights to better understand their audience and refine their marketing strategies.
+Customer detection: As soon as a customer approaches, the distance sensors activate the system.
+1.	__Adaptive light animations:__ The LEDs respond in real time to the customer’s distance, creating an immersive visual atmosphere.
+2. __Visual experience:__ The customer can watch a video or presentation on the touchscreen.
+3. __Product interaction:__ When a product is picked up, the RFID reader instantly identifies it and displays a detailed presentation on the screen.
+4. __In-depth exploration:__ The customer can interact with the screen to access additional information, demonstrations, or personalized advice.
+5. __Data collection__ for real-time analysis of purchasing behaviors.

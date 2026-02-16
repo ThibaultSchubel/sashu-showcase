@@ -1,5 +1,7 @@
-__SaShu__ combines the expertise of an __architect__ and a __designer__, both specialized in retail displays, POS materials  and interior store design, with over 20 years of experience. Today, a point of sale is no longer just a product showcase—it is a fully integrated part of a multichannel strategy, where every detail matters to embody the brand’s identity and create a unique customer experience.
+__SaShu__ we combine __creativity, engineering, and technology__ to reimagine commercial spaces. Our expertise goes far beyond design.
 
-Our approach is built on a deep analysis of your challenges, paired with the use of cutting-edge technologies, to design spaces that foster emotional, intellectual, and physical connections between the brand and its customers.
+* __Custom web application development.__
+* __Embedded software design__ for interactive experiences.
+* __Electronic prototyping workshop__ to bring your ideas to life.
 
-Our goal is to turn every interaction into an opportunity to strengthen loyalty, engagement, and brand recognition.
+We don’t just imagine the future of retail. We create it.

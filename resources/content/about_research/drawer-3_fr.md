@@ -1,7 +1,7 @@
-Vous pouvez faire choix de prendre en charge la réalisation ou faire appel a notre réseau de partenaires pour :
+Nous disposons d'un petit atelier de prototypage disposant:
+ * d'une imprimante 3d,
+ * une fraiseuse CNC,
+ * une graveuse laser,
+ * tout le matériel pour la fabrication et le montage de cartes électronique (Prototype).
 
-* Le Prototypage et validation des concepts,
-* La fabrication et le montage de mobilier et PLV,
-* L’aménagement de vos points de vente.
-
-L'équipe de SaShu sera à vos cotés dans chaque étape de la réalisation.
+Pour tout le reste (Bois, métal, plastique...), nous pouvons compter sur nos partenaires.

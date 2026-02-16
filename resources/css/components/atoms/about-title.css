@@ -3,6 +3,7 @@
     max-width: 50rem;
     display: grid;
     margin-bottom: 4rem;
+
 }
 .about-title-container > * {
     grid-column: 1;
@@ -13,9 +14,10 @@
 .about-title-question {
     font-family: "sans";
     font-weight: 700;
-    font-size: 4.8rem;
+    font-size: 4rem;
     background-clip: text;
     color: var(--color--background);
+
     text-shadow:
             1px 1px 1px var(--color--grey),
             -1px 1px 1px var(--color--grey),
@@ -30,7 +32,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    transform: translateY(-0.5rem);
+    transform: translateY(0.2rem);
 }
 
 

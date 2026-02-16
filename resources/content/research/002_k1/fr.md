@@ -1,14 +1,16 @@
-Pour un studio de design de PLV pragois, nous avons conçu un démonstrateur interactif et innovant.
+Pour démontrer notre savoir-faire en développement logiciel et en électronique, nous avons conçu un présentoir cosmétique intelligent. Ce projet illustre notre capacité à fusionner design, interactivité et technologies avancées pour créer une expérience client immersive et personnalisée.
 
-Le système repose sur une architecture simple:
-* un écran,
-* un mini-ordinateur,
-* une webcam.
+Le présentoir intègre plusieurs technologies :
+* Un __écran tactile__ avec une interface graphique sur mesure, intuitive et esthétique,
+* Des __capteurs de distance__ pour détecter la présence d’un client devant le présentoir,
+* Des __LED adressables__ permettant de créer des animations lumineuses dynamiques et personnalisées,
+* Des __lecteurs RFID__ pour identifier les produits exposés et déclencher des interactions ciblées.
 
-Le jeux s’inspire de l’univers de Space Invaders. Le joueur incarne une base de lancement de missiles et doit détruire les astéroïdes envoyés par des extraterrestres, tout en évitant soigneusement de toucher les vaches.
 
-Conçu pour les points de vente, ce démonstrateur offre une interaction sans contact : le joueur contrôle le jeu uniquement par les mouvements de sa tête, détectés en temps réel par la webcam. Le système est capable de reconnaître les joueurs récurrents, ce qui permet de personnaliser l’expérience.
-
-Entièrement personnalisable, il peut être adapté aux couleurs et à l’identité visuelle de la marque.
-
-Au-delà du divertissement, ce démonstrateur collecte des données démographiques (comme le genre ou une estimation de l’âge des joueurs), offrant aux marques des insights précieux pour mieux comprendre leur audience et affiner leurs stratégies marketing.
+Un scénario d’interaction fluide et engageant :
+1.	__Détection du client :__ Dès qu’un client s’approche, les capteurs de distance activent le système.
+2.	__Animations lumineuses adaptatives :__ Les LED réagissent en temps réel à la distance du client, créant une ambiance visuelle immersive.
+3.	__Expérience visuelle :__ Le client peut visionner un spot vidéo ou une présentation sur l’écran tactile.
+4.	__Interaction avec les produits :__ Lorsqu’un produit est saisi, le lecteur RFID l’identifie instantanément et affiche une présentation détaillée sur l’écran.
+5.	__Exploration approfondie :__ Le client peut interagir avec l’écran pour accéder à des informations supplémentaires, des démonstrations ou des conseils personnalisés.
+6.	__Collecte de data__ pour analyse en temps réel des comportements d'achats

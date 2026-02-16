@@ -9,7 +9,6 @@
     <div class="project-content-container">
       <div class="project-content-list">
         @each((project, index) in content)
-          @!component('components/organisms/project.edge', { project })
           @if(index === 0)
             @!component('components/organisms/about.edge', {i18n, aboutContent})
           @end

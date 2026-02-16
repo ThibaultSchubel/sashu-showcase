@@ -1,5 +1,9 @@
-__SaShu for Retail__ allie l’expertise d’une __architecte__ et d’un __designer__ spécialisés en PLV et aménagement d’intérieurs de points de vente, forte de plus de 20 ans d’expérience. Aujourd’hui, le point de vente ne se limite plus à une simple vitrine de produits : il s’intègre pleinement dans une stratégie multicanale, où chaque détail compte pour incarner l’identité de la marque et créer une expérience client unique.
+L'innovation et la technologie sont les raisons de l'existante de __SaShu for retail__.
 
-Notre approche repose sur une analyse approfondie de vos enjeux, combinée à l’utilisation de nouvelles technologies, pour concevoir des espaces qui établissent des connexions émotionnelles, intellectuelles et physiques entre la marque et ses clients.
+Chez __SaShu__, nous allions __créativité, ingénierie et technologie__ pour repenser les espaces commerciaux. Notre expertise s’étend bien au-delà du design.
+* __Développement d’applications web__ sur mesure.
+* __Conception de logiciels embarqués__ pour des expériences interactives.
+* __Atelier de prototypage électronique__ pour donner vie à vos idées.
 
-Notre objectif est de transformer chaque interaction en une opportunité de renforcer la fidélité, l’engagement et la notoriété de votre enseigne.
+Nous ne nous contentons pas d’imaginer le futur du retail. Nous le créons.
+

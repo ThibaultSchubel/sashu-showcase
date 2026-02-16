@@ -3,7 +3,7 @@
 @layout.main()
     @slot('main')
         @!component('components/organisms/curtain.edge')
-        @!component('components/organisms/intro-video.edge')
+        @!component('components/organisms/intro-video.edge', { currentLocale})
         @!component('components/organisms/intro-hud.edge', { i18n, currentLocale})
     @endslot
 @end
