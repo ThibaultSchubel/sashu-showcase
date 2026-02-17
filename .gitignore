@@ -10,9 +10,10 @@ tmp
 .env.development.local
 
 # Frontend assets compiled code
-/public/
-/public/*
-/public/**
+/public/images/
+/public/video/
+/public/fonts/
+/public/assets/
 
 # Build tools specific
 npm-debug.log
@@ -25,4 +26,5 @@ yarn-error.log
 .DS_Store
 
 Makefile
+
 
