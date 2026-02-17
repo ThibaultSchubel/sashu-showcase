@@ -2,6 +2,7 @@ import { readFile, readdir } from 'node:fs/promises'
 import { Exception } from '@adonisjs/core/exceptions'
 import { MarkdownFile } from '@dimerapp/markdown'
 import { toHtml } from '@dimerapp/markdown/utils'
+import { ErrorType } from '../types/error_type.js'
 
 interface ContentImageObject {
   image: string
@@ -48,6 +49,11 @@ interface ContentObject {
   video: ContentVideoObject
 }
 
+interface ContentServiceReturn {
+  content: ContentObject[]
+  error: ErrorType | null
+}
+
 export enum ContentTypeEnum {
   retail = 'retail',
   research = 'research',
@@ -61,10 +67,17 @@ export class ContentService {
   public static async getContent(
     contentType: ContentTypeEnum,
     language: 'en' | 'fr' | 'cz'
-  ): Promise<ContentObject[]> {
+  ): Promise<ContentServiceReturn> {
     try {
       //const filesList = await this.getContentFilesList(contentType)
-      const projects = await this.listProjectsNames(contentType)
+      const projectsListObj = await this.listProjectsNames(contentType)
+
+      if (projectsListObj.error) {
+        return { content: [], error: projectsListObj.error }
+      }
+
+      const projects = projectsListObj.list
+
       if (projects.length > 0) {
         const contentObjects: ContentObject[] = await Promise.all(
           projects.map(async (project) => {
@@ -85,32 +98,36 @@ export class ContentService {
           })
         )
 
-        return contentObjects.sort((a, b) => {
+        contentObjects.sort((a, b) => {
           const numA = Number.parseInt(a.fileName.split('-')[0], 10)
           const numB = Number.parseInt(b.fileName.split('-')[0], 10)
           return numB - numA
         })
+        return { content: contentObjects, error: null }
       } else {
-        return []
+        return { content: [], error: { code: 500, message: 'No content found.' } }
       }
     } catch (error) {
-      throw new Exception(`Could not load content: ${contentType}`, {
-        code: 'E_NOT_FOUND',
-        status: 404,
-      })
+      return {
+        content: [],
+        error: { code: 500, message: 'Not identified error when loading  content' },
+      }
     }
   }
 
-  private static async listProjectsNames(contentType: ContentTypeEnum): Promise<string[]> {
+  private static async listProjectsNames(
+    contentType: ContentTypeEnum
+  ): Promise<{ list: string[]; error: ErrorType | null }> {
     try {
       const directoryPath = this.contentFolderPath + contentType
       const entries = await readdir(directoryPath, { withFileTypes: true })
-      return entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name)
+
+      return {
+        list: entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name),
+        error: null,
+      }
     } catch (error) {
-      throw new Exception(`Could not list projects names content: ${contentType}`, {
-        code: 'E_NOT_FOUND',
-        status: 404,
-      })
+      return { list: [], error: { code: 500, message: 'Cannot list projects names.' } }
     }
   }
 
@@ -155,7 +172,6 @@ export class ContentService {
           alt: this.formatString(img.alt, language),
         }))
       } else if (file.video) {
-
         const formatedVideoName = this.formatString(file.video.src, language)
 
         file.video = {
@@ -193,9 +209,7 @@ export class ContentService {
     return `${this.imagesFolderPath}${contentType}/${imageName}`
   }
 
-  private static renameVideoWithPath = (
-    videoName: string
-  ): string => {
+  private static renameVideoWithPath = (videoName: string): string => {
     return `${this.videosFolderPath}${videoName}`
   }
 }

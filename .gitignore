@@ -13,6 +13,10 @@ tmp
 public/assets
 public/video
 public/images
+public/assets/**/
+public/video/**/
+public/images/**/
+
 
 # Build tools specific
 npm-debug.log

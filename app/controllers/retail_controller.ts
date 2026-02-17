@@ -12,22 +12,35 @@ export default class RetailController {
   async show({ params, view }: HttpContext) {
     //Get Locale
     const language = params.locale
-    const contentPath = ContentTypeEnum.retail
     const i18n = DetectLocalService.getI18n(language)
 
+    if (!i18n) {
+      const error = {
+        code: '500',
+        message: 'Cannot load I18N',
+      }
+      return view.render('pages/errors/server-error', { error })
+    }
+
+    const contentPath = ContentTypeEnum.retail
+
     //Get Content
-    const content = await ContentService.getContent(contentPath, language)
+    const contentArray = await ContentService.getContent(contentPath, language)
+
+    if (contentArray.error) {
+      return view.render('pages/errors/server-error', { error: contentArray.error })
+    }
 
     //Get about content
     const aboutContentPath = AboutContentTypeEnum.aboutRetail
     const aboutContent = await AboutContentService.getContent(aboutContentPath, language)
 
-    if (i18n && content) {
+    if (i18n && contentArray.content) {
       return view.render('pages/retail', {
         i18n,
         currentLocale: language,
         path: contentPath,
-        content,
+        content: contentArray.content,
         aboutContent,
       })
     } else {
