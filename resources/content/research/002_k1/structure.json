@@ -10,9 +10,9 @@
   },
   "video": {
     "src": {
-      "en": "k1_fr.mp4",
-      "fr": "k1_fr.mp4",
-      "cz": "k1_cz.mp4"
+      "en": "k1_fr.webm",
+      "fr": "k1_fr.webm",
+      "cz": "k1_cz.webm"
     },
     "alt": {
       "en": "video games in shops",
