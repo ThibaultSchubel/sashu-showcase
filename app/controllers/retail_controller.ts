@@ -19,7 +19,7 @@ export default class RetailController {
         code: '500',
         message: 'Cannot load I18N',
       }
-      return view.render('pages/errors/server-error', { error })
+      return view.render('pages/errors/server_error', { error })
     }
 
     const contentPath = ContentTypeEnum.retail
@@ -28,7 +28,7 @@ export default class RetailController {
     const contentArray = await ContentService.getContent(contentPath, language)
 
     if (contentArray.error) {
-      return view.render('pages/errors/server-error', { error: contentArray.error })
+      return view.render('pages/errors/server_error', { error: contentArray.error })
     }
 
     //Get about content
@@ -44,7 +44,9 @@ export default class RetailController {
         aboutContent,
       })
     } else {
-      return view.render('pages/errors/server-error')
+      return view.render('pages/errors/server_error', {
+        error: { code: 500, message: 'Not Found' },
+      })
     }
   }
 }

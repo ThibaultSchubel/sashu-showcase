@@ -1,10 +1,10 @@
-<div class="about-section">
-  <div class="about-column about-left">
+<div class="about-section" >
+  <div class="about-column about-left" data-parallax='.8'>
     @!component('components/atoms/about-title.edge', {question: i18n.t(aboutContent.i18nFileName+".left-question"), answer: i18n.t(aboutContent.i18nFileName+".left-answer")})
     @!component('components/atoms/about-paragraph.edge', {text: aboutContent.paragraph})
   </div>
 
-  <div class="about-column about-right">
+  <div class="about-column about-right" data-parallax='.8'>
     @!component('components/atoms/about-title.edge', {question: i18n.t(aboutContent.i18nFileName+".right-question"), answer: i18n.t(aboutContent.i18nFileName+".right-answer")})
     <div class="about-right-content">
       @!component('components/molecules/about-drawer.edge', {index: 0, title: i18n.t(aboutContent.i18nFileName+".drawer-1-title"), paragraph: aboutContent.drawer1})

@@ -6,7 +6,7 @@
     @!component('components/organisms/navbar.edge', { i18n, currentLocale, path})
     @!component('components/organisms/menu.edge', { i18n, currentLocale, path})
 
-    <div class="project-content-container">
+    <div class="project-content-container" id="scroll">
       <div class="project-content-list">
         @each((project, index) in content)
           @!component('components/organisms/project.edge', { project })

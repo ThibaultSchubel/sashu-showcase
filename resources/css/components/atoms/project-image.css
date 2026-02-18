@@ -3,11 +3,22 @@
     width: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
+}
+
+
+
+.project-image-content{
+    min-width: 100%;
+    min-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 1;
 }
 
 .project-image-picture{
@@ -22,6 +33,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+
 }
 
 

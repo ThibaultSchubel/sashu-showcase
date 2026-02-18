@@ -1,12 +1,12 @@
 <div class="intro-video-container" id="project-drawer-video">
-  <video class="intro-video-player" id="intro-video">
+  <video class="intro-video-player" id="intro-video" playsinline muted controls>
 
     @if(currentLocale == "fr")
-      <source src="/video/sashu_intro-H_fr.webm" type="video/webm" />
+      <source src="/video/sashu_intro-H_fr.mp4" type="video/mp4" />
     @elseif(currentLocale == "cz")
-      <source src="/video/sashu_intro-H_cz.webm" type="video/webm" />
+      <source src="/video/sashu_intro-H_cz.mp4" type="video/mp4" />
     @else
-      <source src="/video/sashu_intro-H_en.webm" type="video/webm" />
+      <source src="/video/sashu_intro-H_en.mp4" type="video/mp4" />
     @end
 
   </video>

@@ -4,6 +4,7 @@ import { AboutDrawer } from './about-drawer.js'
 import ProjectDrawer from './project-drawer.js'
 import ProjectCarousel from './project-carousel.js'
 import { IntroVideo } from './video.js'
+import { Parallax } from './parallax.js'
 
 const CURTAIN_DURATION = 300
 
@@ -13,9 +14,17 @@ const aboutDrawers = new AboutDrawer();
 const projectDrawer = new ProjectDrawer();
 const projectCarousel = new ProjectCarousel();
 const introVideo = new IntroVideo(curtain, CURTAIN_DURATION)
+const parallax = new Parallax()
+
 
 const loadListener = () => {
   curtain.open(CURTAIN_DURATION)
+  introVideo.init()
+  const scrollElement = document.querySelector('#scroll')
+  parallax.init(scrollElement)
+  if (scrollElement) {
+    scrollElement.addEventListener('scroll', () => parallax.onScroll(scrollElement))
+  }
 }
 
 const clickListener = (e) => {
@@ -65,5 +74,5 @@ window.addEventListener('mouseover', mouseEnterListener)
 window.addEventListener('mouseout', mouseLeaveListener)
 
 
-window.addEventListener('load', loadListener)
+window.addEventListener('DOMContentLoaded', loadListener)
 window.addEventListener('click', clickListener)
