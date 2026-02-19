@@ -28,6 +28,13 @@
         src: url('fonts/Oranienbaum-Regular.ttf');
     }
 
+    @font-face {
+        font-family: "bebas-kai";
+        font-weight: 400;
+        src: url('fonts/BebasKai.ttf');
+    }
+
+
 
 
 

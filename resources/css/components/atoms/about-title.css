@@ -12,9 +12,9 @@
 
 
 .about-title-question {
-    font-family: "sans";
+    font-family: "bebas-kai";
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 5rem;
     background-clip: text;
     color: var(--color--background);
 
@@ -38,18 +38,18 @@
 
 @media (width < 1800px) {
     .about-title-question {
-        font-size: 3rem;
+        font-size: 3.8rem;
     }
 
     .about-title-answer {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         transform: translateY(0.2rem);
     }
 }
 
 @media (width < 1400px) {
     .about-title-question {
-        font-size: 4.5rem;
+        font-size: 5rem;
     }
 
     .about-title-answer {
@@ -60,7 +60,7 @@
 
 @media (width < 1024px) {
     .about-title-question {
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
     .about-title-answer {
@@ -71,13 +71,11 @@
 
 @media (width < 768px) {
     .about-title-container {
-        max-width: 25rem;
         margin-bottom: 2rem;
-
     }
 
     .about-title-question {
-        font-size: 2.5rem;
+        font-size: 4rem;
     }
 
     .about-title-answer {

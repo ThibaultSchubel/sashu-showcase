@@ -66,3 +66,12 @@
     transform: translateY(calc(var(--about-drawer-button--size) / -2)) rotate(90deg) scale(1);
     transform-origin: bottom center;
 }
+
+@media (width < 1400px) {
+    .about-drawer-title-content > h5{
+        font-size: 1.5rem;
+        font-weight: 400;
+
+    }
+}
+

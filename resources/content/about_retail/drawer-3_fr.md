@@ -4,4 +4,4 @@ Vous pouvez faire choix de prendre en charge la réalisation ou faire appel a no
 * La fabrication et le montage de mobilier et PLV,
 * L’aménagement de vos points de vente.
 
-L'équipe de SaShu sera à vos cotés dans chaque étape de la réalisation.
+L'équipe de SaShu sera à vos côtés dans chaque étape de la réalisation.

@@ -6,7 +6,7 @@
     width: 100vw;
     height: 100vh;
     overflow-y: auto;
-    padding: calc(var(--navbar--height) + 4.5rem) 8rem ;
+    padding: calc(var(--navbar--height) + 4.5rem) 8rem 0 8rem ;
 }
 
 
@@ -16,7 +16,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     gap: 5rem;
 
 }
@@ -24,14 +23,13 @@
 @media  (width < 1200px) {
     .project-content-container
     {
-        padding: calc(var(--navbar--height) + 3rem) 5rem ;
-
+        padding: calc(var(--navbar--height) + 3rem) 5rem 0 5rem  ;
     }
 }
 
 @media  (width < 768px) {
     .project-content-container
     {
-        padding: calc(var(--navbar--height) + 2rem) 2rem ;
+        padding: calc(var(--navbar--height) + 2rem) 2rem 0 2rem;
     }
 }

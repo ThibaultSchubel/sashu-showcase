@@ -13,6 +13,7 @@
 @media (width < 1400px) {
     .about-section {
         flex-direction: column;
+        gap: 2rem;
     }
 
     .about-column{
