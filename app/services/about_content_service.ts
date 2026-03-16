@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises'
 import { MarkdownFile } from '@dimerapp/markdown'
 import { toHtml } from '@dimerapp/markdown/utils'
 
-interface AboutContentObject {
+export interface AboutContentObject {
   paragraph: string
   drawer1: string
   drawer2: string

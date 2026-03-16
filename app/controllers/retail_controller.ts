@@ -1,7 +1,8 @@
 import type { HttpContext } from '@adonisjs/core/http'
 import { DetectLocalService } from '#services/detect_local_service'
-import { ContentService, ContentTypeEnum } from '#services/content_service'
+import { ContentTypeEnum } from '#services/content_service'
 import { AboutContentService, AboutContentTypeEnum } from '#services/about_content_service'
+import ContentCacheService from '#services/content_cache_service'
 
 export default class RetailController {
   async index(ctx: HttpContext) {
@@ -25,10 +26,11 @@ export default class RetailController {
     const contentPath = ContentTypeEnum.retail
 
     //Get Content
-    const contentArray = await ContentService.getContent(contentPath, language)
+    //const contentArray = await ContentService.getContent(contentPath, language)
+    const contentArray = await ContentCacheService.getProjectContent(ContentTypeEnum.retail, 'fr')
 
-    if (contentArray.error) {
-      return view.render('pages/errors/server_error', { error: contentArray.error })
+    if (!contentArray || contentArray.error) {
+      return view.render('pages/errors/server_error', { error: 'Cannot load content' })
     }
 
     //Get about content

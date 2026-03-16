@@ -58,7 +58,7 @@
 }
 
 .menu-link-idle {
-  color: var(--color--menu-background);
+  color: var(--color--menu-link);
   text-shadow:
     1px 1px 1px var(--color--black),
     -1px 1px 1px var(--color--black),

@@ -82,13 +82,13 @@
 @keyframes slat_animation{
 
     70%{
-        opacity: var(--menu-slat--opacity);
+        opacity: 1;
         transform: scaleY(0.6);
 
     }
 
     100%{
-        opacity: var(--menu-slat--opacity);
+        opacity: 1;
         transform: scaleX(1) scaleY(1.2);
 
     }

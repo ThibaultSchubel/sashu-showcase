@@ -49,7 +49,7 @@ interface ContentObject {
   video: ContentVideoObject
 }
 
-interface ContentServiceReturn {
+export interface ContentServiceReturn {
   content: ContentObject[]
   error: ErrorType | null
 }
