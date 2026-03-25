@@ -7,3 +7,5 @@ Našemu kreativnímu přístupu vdechují život tři pilíře:
 * __Scénografická inspirace:__ Atmosféra čerpající z divadla, filmových studií a světa showbyznysu. Jedna ze stěn, proměněná v jeviště, osvětluje logo Nani Nails jako hlavní hvězdu představení.
 
 Tento prostor, kde se estetika snoubí s funkcionalitou, je navržen tak, aby poskytoval zapamatovatelný a poutavý zákaznický zážitek.
+
+*Partnerství: Moris Design*

@@ -7,3 +7,5 @@ L’approche créative repose sur trois piliers :
 * __Inspiration scénographique :__ Une ambiance directement inspirée du théâtre, des studios de cinéma et de l’univers du show. L’un des murs, transformé en scène, met en lumière le logo NaniNails comme acteur principal.
 
 Cet espace ou l’esthétique rencontre la fonctionnalité doit être une expérience client mémorable et immersive.
+
+*Partenariat: Moris Design* 

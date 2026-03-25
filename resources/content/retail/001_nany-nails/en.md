@@ -7,3 +7,5 @@ Our creative approach is built on three pillars:
 * __Scenographic inspiration:__ An atmosphere drawn from theater, film studios, and the world of showbiz. One wall, transformed into a stage, spotlights the NaniNails logo as the star of the show.
 
 This space is designed to deliver a memorable and immersive customer experience. Aesthetics meet functionality.
+
+*Partnership: Moris Design*
