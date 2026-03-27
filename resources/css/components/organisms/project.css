@@ -1,9 +1,12 @@
 .project-picture-preview {
     width: 100%;
+
 }
 
-.project-picture-preview * {
+.project-picture-preview > * {
    pointer-events: none;
+    display: flex;
+    justify-content: center;
 }
 
 

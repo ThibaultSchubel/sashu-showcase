@@ -7,4 +7,4 @@ SaShu for retail fut chargé de réalisé l'espace «retrait de produits» et «
 
 Le client peut également commander sur place, demander conseil à un spécialiste et récupérer ses colis commandés.
 
-*Partenariat: 4NB* 
+*Partenariat:* [4NB](https://www.4nb.cz/)

@@ -8,4 +8,4 @@ SaShu for Retail byl pověřen návrhem prostor pro "vyzvedávání zboží" a "
 
 Zákazníci zde mohou také objednávat na místě, konzultovat s odborníky a vyzvedávat si předobjednané balíčky.
 
-*Partnerství: 4NB*
+*Spolupráce:* [4NB](https://www.4nb.cz/)

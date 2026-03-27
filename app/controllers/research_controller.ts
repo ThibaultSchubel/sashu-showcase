@@ -27,9 +27,10 @@ export default class ResearchController {
 
     //Get Content
     //const contentArray = await ContentService.getContent(contentPath, language)
-    const contentArray = await ContentCacheService.getProjectContent(ContentTypeEnum.research, 'fr')
-
-
+    const contentArray = await ContentCacheService.getProjectContent(
+      ContentTypeEnum.research,
+      i18n.locale
+    )
 
     if (!contentArray || contentArray.error) {
       return view.render('pages/errors/server-error', { error: 'Cannot load content' })

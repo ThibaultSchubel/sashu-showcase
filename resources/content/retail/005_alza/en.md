@@ -8,4 +8,4 @@ SaShu for Retail was tasked with designing the "product pickup" and "component p
 
 Customers can also place orders on-site, consult with specialists, and pick up their pre-ordered packages.
 
-*Partnership: 4NB*
+*Cooperation:* [4NB](https://www.4nb.cz/)

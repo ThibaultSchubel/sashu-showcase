@@ -8,4 +8,4 @@ Our creative approach is built on three pillars:
 
 This space is designed to deliver a memorable and immersive customer experience. Aesthetics meet functionality.
 
-*Partnership: Moris Design*
+*Cooperation:* [Moris Design](https://www.moris.cz/)

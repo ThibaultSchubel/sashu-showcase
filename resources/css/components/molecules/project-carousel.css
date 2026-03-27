@@ -1,12 +1,26 @@
 .project-carousel-container{
     width: 100%;
     max-width: 65vw;
-    max-height: 32vh;
+    height: 35vh;
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: 100%;
     justify-content: center;
     pointer-events: none;
+}
+
+@media  (width < 1200px){
+    .project-carousel-container
+    {
+        height: 30vh;
+    }
+}
+
+@media  (height < 760px){
+    .project-carousel-container
+    {
+        height: 25vh;
+    }
 }
 
 .project-carousel-container > *{

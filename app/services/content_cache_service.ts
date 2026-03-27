@@ -24,7 +24,7 @@ class ContentCacheService {
 
   static async getProjectContent(
     contentType: ContentTypeEnum,
-    language: 'en' | 'fr' | 'cz'
+    language: string
   ): Promise<ProjectContentObj | null | undefined> {
     if (!this.content) {
       await this.loadContent()

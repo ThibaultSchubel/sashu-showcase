@@ -27,7 +27,10 @@ export default class RetailController {
 
     //Get Content
     //const contentArray = await ContentService.getContent(contentPath, language)
-    const contentArray = await ContentCacheService.getProjectContent(ContentTypeEnum.retail, 'fr')
+    const contentArray = await ContentCacheService.getProjectContent(
+      ContentTypeEnum.retail,
+      i18n.locale
+    )
 
     if (!contentArray || contentArray.error) {
       return view.render('pages/errors/server_error', { error: 'Cannot load content' })

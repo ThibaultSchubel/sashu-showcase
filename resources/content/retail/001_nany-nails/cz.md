@@ -8,4 +8,4 @@ Našemu kreativnímu přístupu vdechují život tři pilíře:
 
 Tento prostor, kde se estetika snoubí s funkcionalitou, je navržen tak, aby poskytoval zapamatovatelný a poutavý zákaznický zážitek.
 
-*Partnerství: Moris Design*
+*Spolupráce:* [Moris Design](https://www.moris.cz/)

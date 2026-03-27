@@ -8,4 +8,4 @@ L’approche créative repose sur trois piliers :
 
 Cet espace ou l’esthétique rencontre la fonctionnalité doit être une expérience client mémorable et immersive.
 
-*Partenariat: Moris Design* 
+*Partenariat:* [Moris Design](https://www.moris.cz/) 
