@@ -79,4 +79,13 @@ window.addEventListener('mouseout', mouseLeaveListener)
 
 window.addEventListener('DOMContentLoaded', loadListener)
 window.addEventListener('click', clickListener, { passive: false })
-window.addEventListener('touchend', clickListener, { passive: false })
+
+window.addEventListener("load", () => {
+  const  isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+  if (isSafari) {
+    window.addEventListener('touchend', clickListener, { passive: false })
+  }
+})
+
+
+
