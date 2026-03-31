@@ -29,6 +29,9 @@ const loadListener = () => {
 
 const clickListener = (e) => {
 
+  const target = e.target.closest('[id]') // Remonte jusqu'à l'élément avec un id
+  if (!target) return
+
   if (e.target.href) {
     e.preventDefault()
     curtain.close(e.target.href, CURTAIN_DURATION)
@@ -75,4 +78,5 @@ window.addEventListener('mouseout', mouseLeaveListener)
 
 
 window.addEventListener('DOMContentLoaded', loadListener)
-window.addEventListener('click', clickListener)
+window.addEventListener('click', clickListener, { passive: false })
+window.addEventListener('touchend', clickListener, { passive: false })

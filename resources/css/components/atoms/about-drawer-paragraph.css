@@ -1,6 +1,7 @@
 .about-drawer-paragraph-container > * {
     text-align: justify;
     text-justify: inter-word;
+    text-indent: 30px;
     font-family: "sans";
     font-weight: 200;
     font-size: 1.2rem;
@@ -23,5 +24,11 @@
 .about-drawer-paragraph-container ul {
     margin-bottom: 0.3rem;
     margin-left: 0.8rem;
+}
 
+
+@media (width < 1400px) {
+    .about-drawer-paragraph-container > * {
+        font-size: 1rem;
+    }
 }

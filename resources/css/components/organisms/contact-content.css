@@ -25,6 +25,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .contact-content-grid{
@@ -165,7 +166,7 @@
         height: auto;
     }
 
-}
+    }
 
 @media (width < 980px) {
     .contact-content-grid-cards{
@@ -184,11 +185,11 @@
 
 @media (width < 768px) {
     .contact-content-columns{
-        padding: 8rem 1.5rem ;
+        padding: 8rem 1rem ;
     }
 
     .contact-content-grid-cards{
-        padding: 0 2rem;
+        padding: 1rem 2rem;
     }
 
     .contact-content-footer{
@@ -199,4 +200,5 @@
         flex-direction: column;
         gap: 0rem;
     }
+
 }
